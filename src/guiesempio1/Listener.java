@@ -40,8 +40,12 @@ public class Listener implements ActionListener {
                 if(g.getCandidati().aggiungi(p)){
                     g.setNome(""); g.setCognome(""); g.setCodiceFiscale(""); g.setDataNascita("");
                     g.setInfo("Status aggiunta di persona: PERSONA AGGIUNTA");
+                    System.out.println("aggiunto");
                 }
-                else g.setInfo("Status aggiunta di persona: PERSONA NON AGGIUNTA");
+                else {
+                    g.setInfo("Status aggiunta di persona: PERSONA NON AGGIUNTA");
+                    System.out.println("no aggiunto");
+                }
             }
             if(b.getText().equals("Cancella")){
                 g.setNome(""); g.setCognome(""); g.setCodiceFiscale(""); g.setDataNascita("");

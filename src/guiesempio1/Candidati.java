@@ -35,22 +35,22 @@ public class Candidati {
     return true; 
 }*/
     public boolean aggiungi(Persona p) {
-    if (controlloPersona(p)) {
-        listaCandidati.add(p);
-        return true; // Persona aggiunta con successo
-    } else {
-        return false; // Persona già presente, non aggiunta
+        boolean check = true;
+        if(listaCandidati.isEmpty()){
+            listaCandidati.add(p);
+        }
+        else{
+            for(int i = 0; i < listaCandidati.size(); i++){
+                Persona persona = listaCandidati.get(i);
+                System.out.println("Confronto CodiceFiscale: " + persona.getCodiceFiscale() + " vs " + p.getCodiceFiscale());
+                if(persona.getCodiceFiscale().equals(p.getCodiceFiscale())){
+                    check = false;
+                    break;
+                }
+            }
+        }
+        if(check) listaCandidati.add(p);
+        return check;
     }
 }
 
-// Controlla se la persona è già presente nella lista
-public boolean controlloPersona(Persona p) {
-    for (Persona candidato : listaCandidati) {
-        if (candidato.equals(p)) {
-            System.out.println("Persona già presente: " + candidato);  // Debug
-            return false; // La persona è già presente
-        }
-    }
-    return true; // La persona non è presente
-}
-}
