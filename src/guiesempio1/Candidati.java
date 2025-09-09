@@ -16,24 +16,41 @@ public class Candidati {
     public Candidati() {
         listaCandidati = new ArrayList();
     }
-    
-    public String aggiungi(Persona p){
-        if(controlloPersona(p)){
-           listaCandidati.add(p);
-           return "Candidato aggiunto";
-        }
-        else{
-           return "Candidato già presente"; 
-        }
-        
+    /*
+    public boolean aggiungi(Persona p) {
+    if (controlloPersona(p)) {
+        listaCandidati.add(p);
+        return true;
+    } else {
+        return false;
     }
+}
     
-    public boolean controlloPersona(Persona p){
-        boolean check = false;
-        for(int i = 0; i < listaCandidati.size(); i++){
-            if(listaCandidati.get(i).equals(p))
-                check = true;
+    public boolean controlloPersona(Persona p) {
+    for (Persona candidato : listaCandidati) {
+        if (candidato.equals(p)) {
+            return false; 
         }
-        return !check;
     }
+    return true; 
+}*/
+    public boolean aggiungi(Persona p) {
+    if (controlloPersona(p)) {
+        listaCandidati.add(p);
+        return true; // Persona aggiunta con successo
+    } else {
+        return false; // Persona già presente, non aggiunta
+    }
+}
+
+// Controlla se la persona è già presente nella lista
+public boolean controlloPersona(Persona p) {
+    for (Persona candidato : listaCandidati) {
+        if (candidato.equals(p)) {
+            System.out.println("Persona già presente: " + candidato);  // Debug
+            return false; // La persona è già presente
+        }
+    }
+    return true; // La persona non è presente
+}
 }
