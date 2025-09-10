@@ -19,6 +19,7 @@ public class HTTPC {
         // TODO code application logic hereui 
         Gui g = new Gui();
         // http://10.100.0.77/get_rele_status
+        // http://10.100.0.77/set_rele
         // FisitronHUB nome rete
         // Fisitron319086 password
         // risposta: stato
