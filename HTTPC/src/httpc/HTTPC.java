@@ -18,6 +18,14 @@ public class HTTPC {
     public static void main(String[] args) {
         // TODO code application logic hereui 
         Gui g = new Gui();
+        // http://10.100.0.77/get_rele_status
+        // FisitronHUB nome rete
+        // Fisitron319086 password
+        // risposta: stato
+        
+        
+        
+        
         /*String URL = "https://alexwohlbruck.github.io/cat-facts/";
          HttpClient client = HttpClient.newHttpClient();
          HttpRequest request = HttpRequest.newBuilder()

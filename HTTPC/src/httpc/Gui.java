@@ -29,7 +29,10 @@ public class Gui extends JFrame {
         this.setSize(700, 400);
         link = new JTextField("Inserisci il link");
         button = new JButton("Invia");
-        response = new JTextArea();
+        response = new JTextArea("""
+                                 Stato codice: x
+                                 Risposta body: x
+                                 Versione: x""");
         areaResponse = new JScrollPane(response);
         JPanel input = new JPanel();
         input.setLayout(new GridLayout(1, 2));
@@ -48,7 +51,6 @@ public class Gui extends JFrame {
                         getData();
                     }
                 }
-                
             }
         });
         
@@ -69,14 +71,17 @@ public class Gui extends JFrame {
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder()
                             .uri(URI.create(urlString))
+                            //.header("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36")
+                            .GET()
+                            .version(HttpClient.Version.HTTP_1_1)
                             .build();
-        
-        
         try{ 
             HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
             System.out.println("Stato codice: " + response.statusCode());
             System.out.println("Response Body: " + response.body());
-            setResponse(response.body());
+            System.out.println("Version: " + response.version());
+            
+            setResponse("Stato codice: " + response.statusCode() + "\nRisposta body: " + response.body() + "\nVersione: " + response.version());
         }
         catch(Exception e){
             e.printStackTrace();
@@ -90,7 +95,7 @@ public class Gui extends JFrame {
 
     private boolean isValidUrl(String urlString) {
         try {
-            URI uri = new URI(urlString);
+            URI uri = new URI(urlString); 
             return uri.isAbsolute() && (uri.getScheme().equals("http") || uri.getScheme().equals("https"));
         } catch (Exception e) {
             return false;
