@@ -10,7 +10,6 @@ import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.net.URI;
-import java.net.URL;
 import javax.swing.*;
 import java.net.http.*;
 
@@ -73,7 +72,7 @@ public class Gui extends JFrame {
                             .build();
         
         
-        try{ // da sistemare
+        try{ 
             HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
             System.out.println("Stato codice: " + response.statusCode());
             System.out.println("Response Body: " + response.body());
