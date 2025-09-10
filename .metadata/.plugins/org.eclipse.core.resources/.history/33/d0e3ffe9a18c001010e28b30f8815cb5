@@ -1,0 +1,39 @@
+/*
+ * carrello.h
+ *
+ *  Created on: Sep 8, 2025
+ *      Author: fisitronpassdynamics
+ */
+
+#ifndef CARRELLO_H_
+#define CARRELLO_H_
+
+#include <iostream>
+#include <vector>
+#include <list>
+#include <cstdlib>
+#include <ctime>
+
+typedef enum items_type
+{
+
+	FRUTTA,
+	VERDURA,
+	PANE,
+	LATTE
+
+}items_type;
+
+
+class carrello {
+public:
+	carrello();
+	virtual ~carrello();
+
+
+	list<items_type> items_local;
+
+	void aggiunta_item(items_type it);
+};
+
+#endif /* CARRELLO_H_ */

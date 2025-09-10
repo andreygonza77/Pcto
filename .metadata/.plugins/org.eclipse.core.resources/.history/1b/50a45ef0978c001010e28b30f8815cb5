@@ -1,0 +1,36 @@
+//============================================================================
+// Name        : Test1.cpp
+// Author      : 
+// Version     :
+// Copyright   : Your copyright notice
+// Description : Hello World in C++, Ansi-style
+//============================================================================
+
+#include <iostream>
+#include <vector>
+#include <cstdlib>
+#include <ctime>
+
+using namespace std;
+const int MAX = 5;
+
+void stampaTesto(){
+	cout << "Hello World!";
+}
+
+void riempiArray(int array[]){
+	srand(time(NULL));
+	for(int i = 0; i < MAX; i++)
+		array[i] = rand()%100;
+}
+
+int main() {
+	cout << "!!!Hello World!!!" << endl; // prints !!!Hello World!!!
+	stampaTesto();
+	int numeri[MAX] = {0, 5, 10, 15, 20};
+	int arrayEsempio[MAX];
+	riempiArray(arrayEsempio);
+	return 0;
+}
+
+

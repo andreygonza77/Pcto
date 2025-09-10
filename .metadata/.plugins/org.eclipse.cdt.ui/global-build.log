@@ -1,0 +1,985 @@
+10:58:42 **** Build of configuration Debug for project Test1 ****
+make all 
+Cannot run program "make": Unknown reason
+
+Error: Program "make" not found in PATH
+PATH=[/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin]
+10:59:09 **** Incremental Build of configuration Debug for project Test1 ****
+make all 
+Building file: ../src/Test1.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Test1.d" -MT"src/Test1.o" -o "src/Test1.o" "../src/Test1.cpp"
+/bin/sh: 1: g++: not found
+make: *** [src/subdir.mk:20: src/Test1.o] Error 127
+"make all" terminated with exit code 2. Build might be incomplete.
+11:01:01 **** Incremental Build of configuration Debug for project Test1 ****
+make all 
+Building file: ../src/Test1.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Test1.d" -MT"src/Test1.o" -o "src/Test1.o" "../src/Test1.cpp"
+/bin/sh: 1: g++: not found
+make: *** [src/subdir.mk:20: src/Test1.o] Error 127
+"make all" terminated with exit code 2. Build might be incomplete.
+11:01:25 **** Incremental Build of configuration Debug for project Test1 ****
+make all 
+Building file: ../src/Test1.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Test1.d" -MT"src/Test1.o" -o "src/Test1.o" "../src/Test1.cpp"
+Finished building: ../src/Test1.cpp
+ 
+Building target: Test1
+Invoking: GCC C++ Linker
+g++  -o "Test1"  ./src/Test1.o   
+Finished building target: Test1
+ 
+11:01:45 **** Incremental Build of configuration Debug for project Test1 ****
+make all 
+make: Nothing to be done for 'all'.
+11:01:49 **** Incremental Build of configuration Debug for project Test1 ****
+make all 
+make: Nothing to be done for 'all'.
+11:01:50 **** Incremental Build of configuration Debug for project Test1 ****
+make all 
+make: Nothing to be done for 'all'.
+11:32:05 **** Incremental Build of configuration Debug for project Test1 ****
+make all 
+Building file: ../src/Test1.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Test1.d" -MT"src/Test1.o" -o "src/Test1.o" "../src/Test1.cpp"
+../src/Test1.cpp:12:7: error: ‘MAX’ does not name a type
+   12 | const MAX = 5;
+      |       ^~~
+../src/Test1.cpp:21:10: error: two or more data types in declaration of ‘main’
+   21 | int main() {
+      |          ^
+make: *** [src/subdir.mk:20: src/Test1.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+11:32:14 **** Incremental Build of configuration Debug for project Test1 ****
+make all 
+Building file: ../src/Test1.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Test1.d" -MT"src/Test1.o" -o "src/Test1.o" "../src/Test1.cpp"
+../src/Test1.cpp:12:7: error: ‘MAX’ does not name a type
+   12 | const MAX = 5;
+      |       ^~~
+../src/Test1.cpp:21:10: error: two or more data types in declaration of ‘main’
+   21 | int main() {
+      |          ^
+make: *** [src/subdir.mk:20: src/Test1.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+11:32:38 **** Incremental Build of configuration Debug for project Test1 ****
+make all 
+Building file: ../src/Test1.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Test1.d" -MT"src/Test1.o" -o "src/Test1.o" "../src/Test1.cpp"
+../src/Test1.cpp:21:10: error: two or more data types in declaration of ‘main’
+   21 | int main() {
+      |          ^
+make: *** [src/subdir.mk:20: src/Test1.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+11:34:16 **** Incremental Build of configuration Debug for project Test1 ****
+make all 
+Building file: ../src/Test1.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Test1.d" -MT"src/Test1.o" -o "src/Test1.o" "../src/Test1.cpp"
+../src/Test1.cpp:18:1: error: ‘::main’ must return ‘int’
+   18 | void main() {
+      | ^~~~
+../src/Test1.cpp: In function ‘int main()’:
+../src/Test1.cpp:21:6: warning: unused variable ‘numeri’ [-Wunused-variable]
+   21 |  int numeri[MAX] = {0, 5, 10, 15, 20};
+      |      ^~~~~~
+make: *** [src/subdir.mk:20: src/Test1.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+11:35:36 **** Incremental Build of configuration Debug for project Test1 ****
+make all 
+Building file: ../src/Test1.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Test1.d" -MT"src/Test1.o" -o "src/Test1.o" "../src/Test1.cpp"
+../src/Test1.cpp: In function ‘int main()’:
+../src/Test1.cpp:21:6: warning: unused variable ‘numeri’ [-Wunused-variable]
+   21 |  int numeri[MAX] = {0, 5, 10, 15, 20};
+      |      ^~~~~~
+Finished building: ../src/Test1.cpp
+ 
+Building target: Test1
+Invoking: GCC C++ Linker
+g++  -o "Test1"  ./src/Test1.o   
+Finished building target: Test1
+ 
+11:35:41 **** Incremental Build of configuration Debug for project Test1 ****
+make all 
+make: Nothing to be done for 'all'.
+11:40:01 **** Incremental Build of configuration Debug for project Test1 ****
+make all 
+Building file: ../src/Test1.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Test1.d" -MT"src/Test1.o" -o "src/Test1.o" "../src/Test1.cpp"
+../src/Test1.cpp: In function ‘int main()’:
+../src/Test1.cpp:30:6: warning: unused variable ‘numeri’ [-Wunused-variable]
+   30 |  int numeri[MAX] = {0, 5, 10, 15, 20};
+      |      ^~~~~~
+Finished building: ../src/Test1.cpp
+ 
+Building target: Test1
+Invoking: GCC C++ Linker
+g++  -o "Test1"  ./src/Test1.o   
+Finished building target: Test1
+ 
+11:40:04 **** Incremental Build of configuration Debug for project Test1 ****
+make all 
+make: Nothing to be done for 'all'.
+11:41:06 **** Incremental Build of configuration Debug for project Test1 ****
+make all 
+Building file: ../src/Test1.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Test1.d" -MT"src/Test1.o" -o "src/Test1.o" "../src/Test1.cpp"
+../src/Test1.cpp: In function ‘int main()’:
+../src/Test1.cpp:30:6: warning: unused variable ‘numeri’ [-Wunused-variable]
+   30 |  int numeri[MAX] = {0, 5, 10, 15, 20};
+      |      ^~~~~~
+Finished building: ../src/Test1.cpp
+ 
+Building target: Test1
+Invoking: GCC C++ Linker
+g++  -o "Test1"  ./src/Test1.o   
+Finished building target: Test1
+ 
+11:41:08 **** Incremental Build of configuration Debug for project Test1 ****
+make all 
+make: Nothing to be done for 'all'.
+11:41:43 **** Incremental Build of configuration Debug for project Test1 ****
+make all 
+Building file: ../src/Test1.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Test1.d" -MT"src/Test1.o" -o "src/Test1.o" "../src/Test1.cpp"
+../src/Test1.cpp: In function ‘int main()’:
+../src/Test1.cpp:30:6: warning: unused variable ‘numeri’ [-Wunused-variable]
+   30 |  int numeri[MAX] = {0, 5, 10, 15, 20};
+      |      ^~~~~~
+Finished building: ../src/Test1.cpp
+ 
+Building target: Test1
+Invoking: GCC C++ Linker
+g++  -o "Test1"  ./src/Test1.o   
+Finished building target: Test1
+ 
+11:41:45 **** Incremental Build of configuration Debug for project Test1 ****
+make all 
+make: Nothing to be done for 'all'.
+11:41:55 **** Incremental Build of configuration Debug for project Test1 ****
+make all 
+Building file: ../src/Test1.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Test1.d" -MT"src/Test1.o" -o "src/Test1.o" "../src/Test1.cpp"
+../src/Test1.cpp: In function ‘int main()’:
+../src/Test1.cpp:30:6: warning: unused variable ‘numeri’ [-Wunused-variable]
+   30 |  int numeri[MAX] = {0, 5, 10, 15, 20};
+      |      ^~~~~~
+Finished building: ../src/Test1.cpp
+ 
+Building target: Test1
+Invoking: GCC C++ Linker
+g++  -o "Test1"  ./src/Test1.o   
+Finished building target: Test1
+ 
+11:41:59 **** Incremental Build of configuration Debug for project Test1 ****
+make all 
+make: Nothing to be done for 'all'.
+11:42:01 **** Incremental Build of configuration Debug for project Test1 ****
+make all 
+make: Nothing to be done for 'all'.
+11:42:14 **** Incremental Build of configuration Debug for project Test1 ****
+make all 
+Building file: ../src/Test1.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Test1.d" -MT"src/Test1.o" -o "src/Test1.o" "../src/Test1.cpp"
+../src/Test1.cpp: In function ‘int main()’:
+../src/Test1.cpp:30:6: warning: unused variable ‘numeri’ [-Wunused-variable]
+   30 |  int numeri[MAX] = {0, 5, 10, 15, 20};
+      |      ^~~~~~
+Finished building: ../src/Test1.cpp
+ 
+Building target: Test1
+Invoking: GCC C++ Linker
+g++  -o "Test1"  ./src/Test1.o   
+Finished building target: Test1
+ 
+11:42:25 **** Incremental Build of configuration Debug for project Test1 ****
+make all 
+make: Nothing to be done for 'all'.
+11:44:52 **** Incremental Build of configuration Debug for project Test1 ****
+make all 
+Building file: ../src/Test1.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Test1.d" -MT"src/Test1.o" -o "src/Test1.o" "../src/Test1.cpp"
+../src/Test1.cpp: In function ‘int main()’:
+../src/Test1.cpp:30:6: warning: unused variable ‘numeri’ [-Wunused-variable]
+   30 |  int numeri[MAX] = {0, 5, 10, 15, 20};
+      |      ^~~~~~
+Finished building: ../src/Test1.cpp
+ 
+Building target: Test1
+Invoking: GCC C++ Linker
+g++  -o "Test1"  ./src/Test1.o   
+Finished building target: Test1
+ 
+11:47:03 **** Incremental Build of configuration Debug for project Test1 ****
+make all 
+Building file: ../src/Test1.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Test1.d" -MT"src/Test1.o" -o "src/Test1.o" "../src/Test1.cpp"
+../src/Test1.cpp: In function ‘int main()’:
+../src/Test1.cpp:30:6: warning: unused variable ‘numeri’ [-Wunused-variable]
+   30 |  int numeri[MAX] = {0, 5, 10, 15, 20};
+      |      ^~~~~~
+Finished building: ../src/Test1.cpp
+ 
+Building target: Test1
+Invoking: GCC C++ Linker
+g++  -o "Test1"  ./src/Test1.o   
+Finished building target: Test1
+ 
+11:47:06 **** Incremental Build of configuration Debug for project Test1 ****
+make all 
+make: Nothing to be done for 'all'.
+11:47:18 **** Incremental Build of configuration Debug for project Test1 ****
+make all 
+Building file: ../src/Test1.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Test1.d" -MT"src/Test1.o" -o "src/Test1.o" "../src/Test1.cpp"
+../src/Test1.cpp: In function ‘int main()’:
+../src/Test1.cpp:30:6: warning: unused variable ‘numeri’ [-Wunused-variable]
+   30 |  int numeri[MAX] = {0, 5, 10, 15, 20};
+      |      ^~~~~~
+make: *** Deleting file 'src/Test1.o'
+make: *** [src/subdir.mk:20: src/Test1.o] Terminated
+Command canceled
+11:47:20 **** Build of configuration Debug for project Test1 ****
+make all 
+Building file: ../src/Test1.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Test1.d" -MT"src/Test1.o" -o "src/Test1.o" "../src/Test1.cpp"
+../src/Test1.cpp: In function ‘int main()’:
+../src/Test1.cpp:30:6: warning: unused variable ‘numeri’ [-Wunused-variable]
+   30 |  int numeri[MAX] = {0, 5, 10, 15, 20};
+      |      ^~~~~~
+Finished building: ../src/Test1.cpp
+ 
+Building target: Test1
+Invoking: GCC C++ Linker
+g++  -o "Test1"  ./src/Test1.o   
+Finished building target: Test1
+ 
+11:52:30 **** Incremental Build of configuration Debug for project Test1 ****
+make all 
+Building file: ../src/Test1.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Test1.d" -MT"src/Test1.o" -o "src/Test1.o" "../src/Test1.cpp"
+../src/Test1.cpp: In function ‘int main()’:
+../src/Test1.cpp:33:6: warning: unused variable ‘numeri’ [-Wunused-variable]
+   33 |  int numeri[MAX] = {0, 5, 10, 15, 20}; // inizializzazione array con valori
+      |      ^~~~~~
+Finished building: ../src/Test1.cpp
+ 
+Building target: Test1
+Invoking: GCC C++ Linker
+g++  -o "Test1"  ./src/Test1.o   
+Finished building target: Test1
+ 
+11:52:32 **** Incremental Build of configuration Debug for project Test1 ****
+make all 
+make: Nothing to be done for 'all'.
+11:56:57 **** Incremental Build of configuration Debug for project Test1 ****
+make all 
+Building file: ../src/Test1.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Test1.d" -MT"src/Test1.o" -o "src/Test1.o" "../src/Test1.cpp"
+../src/Test1.cpp: In function ‘int main()’:
+../src/Test1.cpp:33:6: warning: unused variable ‘numeri’ [-Wunused-variable]
+   33 |  int numeri[MAX] = {0, 5, 10, 15, 20}; // inizializzazione array con valori
+      |      ^~~~~~
+Finished building: ../src/Test1.cpp
+ 
+Building target: Test1
+Invoking: GCC C++ Linker
+g++  -o "Test1"  ./src/Test1.o   
+Finished building target: Test1
+ 
+11:57:52 **** Incremental Build of configuration Debug for project Test1 ****
+make all 
+Building file: ../src/Test1.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Test1.d" -MT"src/Test1.o" -o "src/Test1.o" "../src/Test1.cpp"
+../src/Test1.cpp: In function ‘int main()’:
+../src/Test1.cpp:48:9: error: cannot convert ‘std::__cxx11::list<std::__cxx11::basic_string<char> >’ to ‘int*’
+   48 |  stampa(listEsempio);
+      |         ^~~~~~~~~~~
+      |         |
+      |         std::__cxx11::list<std::__cxx11::basic_string<char> >
+../src/Test1.cpp:18:17: note:   initializing argument 1 of ‘void stampa(int*)’
+   18 | void stampa(int array[]){
+      |             ~~~~^~~~~~~
+../src/Test1.cpp:33:6: warning: unused variable ‘numeri’ [-Wunused-variable]
+   33 |  int numeri[MAX] = {0, 5, 10, 15, 20}; // inizializzazione array con valori
+      |      ^~~~~~
+make: *** [src/subdir.mk:20: src/Test1.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+11:58:00 **** Incremental Build of configuration Debug for project Test1 ****
+make all 
+Building file: ../src/Test1.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Test1.d" -MT"src/Test1.o" -o "src/Test1.o" "../src/Test1.cpp"
+../src/Test1.cpp: In function ‘int main()’:
+../src/Test1.cpp:33:6: warning: unused variable ‘numeri’ [-Wunused-variable]
+   33 |  int numeri[MAX] = {0, 5, 10, 15, 20}; // inizializzazione array con valori
+      |      ^~~~~~
+Finished building: ../src/Test1.cpp
+ 
+Building target: Test1
+Invoking: GCC C++ Linker
+g++  -o "Test1"  ./src/Test1.o   
+Finished building target: Test1
+ 
+11:59:20 **** Incremental Build of configuration Debug for project Test1 ****
+make all 
+Building file: ../src/Test1.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Test1.d" -MT"src/Test1.o" -o "src/Test1.o" "../src/Test1.cpp"
+../src/Test1.cpp: In function ‘void stampa(std::vector<float>)’:
+../src/Test1.cpp:24:19: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<float>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+   24 |  for(int i = 0; i < vettore.size(); i++)
+      |                 ~~^~~~~~~~~~~~~~~~
+../src/Test1.cpp: In function ‘int main()’:
+../src/Test1.cpp:38:6: warning: unused variable ‘numeri’ [-Wunused-variable]
+   38 |  int numeri[MAX] = {0, 5, 10, 15, 20}; // inizializzazione array con valori
+      |      ^~~~~~
+Finished building: ../src/Test1.cpp
+ 
+Building target: Test1
+Invoking: GCC C++ Linker
+g++  -o "Test1"  ./src/Test1.o   
+Finished building target: Test1
+ 
+11:59:37 **** Incremental Build of configuration Debug for project Test1 ****
+make all 
+Building file: ../src/Test1.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Test1.d" -MT"src/Test1.o" -o "src/Test1.o" "../src/Test1.cpp"
+../src/Test1.cpp: In function ‘void stampa(std::vector<float>)’:
+../src/Test1.cpp:24:19: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<float>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+   24 |  for(int i = 0; i < vettore.size(); i++)
+      |                 ~~^~~~~~~~~~~~~~~~
+../src/Test1.cpp: In function ‘int main()’:
+../src/Test1.cpp:38:6: warning: unused variable ‘numeri’ [-Wunused-variable]
+   38 |  int numeri[MAX] = {0, 5, 10, 15, 20}; // inizializzazione array con valori
+      |      ^~~~~~
+Finished building: ../src/Test1.cpp
+ 
+Building target: Test1
+Invoking: GCC C++ Linker
+g++  -o "Test1"  ./src/Test1.o   
+Finished building target: Test1
+ 
+11:59:39 **** Incremental Build of configuration Debug for project Test1 ****
+make all 
+make: Nothing to be done for 'all'.
+12:00:07 **** Incremental Build of configuration Debug for project Test1 ****
+make all 
+Building file: ../src/Test1.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Test1.d" -MT"src/Test1.o" -o "src/Test1.o" "../src/Test1.cpp"
+../src/Test1.cpp: In function ‘void stampa(std::vector<float>)’:
+../src/Test1.cpp:24:19: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<float>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+   24 |  for(int i = 0; i < vettore.size(); i++)
+      |                 ~~^~~~~~~~~~~~~~~~
+../src/Test1.cpp: In function ‘int main()’:
+../src/Test1.cpp:38:6: warning: unused variable ‘numeri’ [-Wunused-variable]
+   38 |  int numeri[MAX] = {0, 5, 10, 15, 20}; // inizializzazione array con valori
+      |      ^~~~~~
+make: *** [src/subdir.mk:20: src/Test1.o] Terminated
+Command canceled
+12:00:07 **** Build of configuration Debug for project Test1 ****
+make all 
+Building file: ../src/Test1.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Test1.d" -MT"src/Test1.o" -o "src/Test1.o" "../src/Test1.cpp"
+../src/Test1.cpp: In function ‘void stampa(std::vector<float>)’:
+../src/Test1.cpp:24:19: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<float>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+   24 |  for(int i = 0; i < vettore.size(); i++)
+      |                 ~~^~~~~~~~~~~~~~~~
+../src/Test1.cpp: In function ‘int main()’:
+../src/Test1.cpp:38:6: warning: unused variable ‘numeri’ [-Wunused-variable]
+   38 |  int numeri[MAX] = {0, 5, 10, 15, 20}; // inizializzazione array con valori
+      |      ^~~~~~
+Finished building: ../src/Test1.cpp
+ 
+Building target: Test1
+Invoking: GCC C++ Linker
+g++  -o "Test1"  ./src/Test1.o   
+Finished building target: Test1
+ 
+12:01:06 **** Incremental Build of configuration Debug for project Test1 ****
+make all 
+Building file: ../src/Test1.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Test1.d" -MT"src/Test1.o" -o "src/Test1.o" "../src/Test1.cpp"
+../src/Test1.cpp: In function ‘void stampa(std::vector<float>)’:
+../src/Test1.cpp:24:19: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<float>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+   24 |  for(int i = 0; i < vettore.size(); i++)
+      |                 ~~^~~~~~~~~~~~~~~~
+../src/Test1.cpp: In function ‘void stampa(std::__cxx11::list<std::__cxx11::basic_string<char> >)’:
+../src/Test1.cpp:28:19: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::__cxx11::list<std::__cxx11::basic_string<char> >::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+   28 |  for(int i = 0; i < list.size(); i++)
+      |                 ~~^~~~~~~~~~~~~
+../src/Test1.cpp:29:15: error: no match for ‘operator[]’ (operand types are ‘std::__cxx11::list<std::__cxx11::basic_string<char> >’ and ‘int’)
+   29 |   cout << list[i] << endl;
+      |               ^
+../src/Test1.cpp: In function ‘int main()’:
+../src/Test1.cpp:42:6: warning: unused variable ‘numeri’ [-Wunused-variable]
+   42 |  int numeri[MAX] = {0, 5, 10, 15, 20}; // inizializzazione array con valori
+      |      ^~~~~~
+make: *** [src/subdir.mk:20: src/Test1.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+12:01:12 **** Incremental Build of configuration Debug for project Test1 ****
+make all 
+Building file: ../src/Test1.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Test1.d" -MT"src/Test1.o" -o "src/Test1.o" "../src/Test1.cpp"
+../src/Test1.cpp: In function ‘void stampa(std::vector<float>)’:
+../src/Test1.cpp:24:19: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<float>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+   24 |  for(int i = 0; i < vettore.size(); i++)
+      |                 ~~^~~~~~~~~~~~~~~~
+../src/Test1.cpp: In function ‘void stampa(std::__cxx11::list<std::__cxx11::basic_string<char> >)’:
+../src/Test1.cpp:28:19: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::__cxx11::list<std::__cxx11::basic_string<char> >::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+   28 |  for(int i = 0; i < list.size(); i++)
+      |                 ~~^~~~~~~~~~~~~
+../src/Test1.cpp:29:15: error: no match for ‘operator[]’ (operand types are ‘std::__cxx11::list<std::__cxx11::basic_string<char> >’ and ‘int’)
+   29 |   cout << list[i] << endl;
+      |               ^
+../src/Test1.cpp: In function ‘int main()’:
+../src/Test1.cpp:42:6: warning: unused variable ‘numeri’ [-Wunused-variable]
+   42 |  int numeri[MAX] = {0, 5, 10, 15, 20}; // inizializzazione array con valori
+      |      ^~~~~~
+make: *** [src/subdir.mk:20: src/Test1.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+12:03:32 **** Incremental Build of configuration Debug for project Test1 ****
+make all 
+Building file: ../src/Test1.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Test1.d" -MT"src/Test1.o" -o "src/Test1.o" "../src/Test1.cpp"
+../src/Test1.cpp: In function ‘void stampa(std::vector<float>)’:
+../src/Test1.cpp:24:19: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<float>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+   24 |  for(int i = 0; i < vettore.size(); i++)
+      |                 ~~^~~~~~~~~~~~~~~~
+../src/Test1.cpp: In function ‘int main()’:
+../src/Test1.cpp:38:6: warning: unused variable ‘numeri’ [-Wunused-variable]
+   38 |  int numeri[MAX] = {0, 5, 10, 15, 20}; // inizializzazione array con valori
+      |      ^~~~~~
+Finished building: ../src/Test1.cpp
+ 
+Building target: Test1
+Invoking: GCC C++ Linker
+g++  -o "Test1"  ./src/Test1.o   
+Finished building target: Test1
+ 
+12:03:36 **** Incremental Build of configuration Debug for project Test1 ****
+make all 
+make: Nothing to be done for 'all'.
+12:04:42 **** Incremental Build of configuration Debug for project Test1 ****
+make all 
+Building file: ../src/Test1.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Test1.d" -MT"src/Test1.o" -o "src/Test1.o" "../src/Test1.cpp"
+../src/Test1.cpp: In function ‘void stampa(std::vector<float>)’:
+../src/Test1.cpp:24:19: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<float>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+   24 |  for(int i = 0; i < vettore.size(); i++)
+      |                 ~~^~~~~~~~~~~~~~~~
+../src/Test1.cpp: In function ‘int main()’:
+../src/Test1.cpp:59:26: error: expected ‘;’ before ‘for’
+   59 |  cout << "Lista cambiata"
+      |                          ^
+      |                          ;
+   60 |  for(string s : listEsempio) cout << s << endl;
+      |  ~~~                      
+../src/Test1.cpp:38:6: warning: unused variable ‘numeri’ [-Wunused-variable]
+   38 |  int numeri[MAX] = {0, 5, 10, 15, 20}; // inizializzazione array con valori
+      |      ^~~~~~
+make: *** [src/subdir.mk:20: src/Test1.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+12:04:50 **** Incremental Build of configuration Debug for project Test1 ****
+make all 
+Building file: ../src/Test1.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Test1.d" -MT"src/Test1.o" -o "src/Test1.o" "../src/Test1.cpp"
+../src/Test1.cpp: In function ‘void stampa(std::vector<float>)’:
+../src/Test1.cpp:24:19: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<float>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+   24 |  for(int i = 0; i < vettore.size(); i++)
+      |                 ~~^~~~~~~~~~~~~~~~
+../src/Test1.cpp: In function ‘int main()’:
+../src/Test1.cpp:59:26: error: expected ‘;’ before ‘for’
+   59 |  cout << "Lista cambiata"
+      |                          ^
+      |                          ;
+   60 |  for(string s : listEsempio) cout << s << endl;
+      |  ~~~                      
+../src/Test1.cpp:38:6: warning: unused variable ‘numeri’ [-Wunused-variable]
+   38 |  int numeri[MAX] = {0, 5, 10, 15, 20}; // inizializzazione array con valori
+      |      ^~~~~~
+make: *** [src/subdir.mk:20: src/Test1.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+12:05:26 **** Incremental Build of configuration Debug for project Test1 ****
+make all 
+Building file: ../src/Test1.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Test1.d" -MT"src/Test1.o" -o "src/Test1.o" "../src/Test1.cpp"
+../src/Test1.cpp: In function ‘void stampa(std::vector<float>)’:
+../src/Test1.cpp:24:19: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<float>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+   24 |  for(int i = 0; i < vettore.size(); i++)
+      |                 ~~^~~~~~~~~~~~~~~~
+../src/Test1.cpp: In function ‘int main()’:
+../src/Test1.cpp:38:6: warning: unused variable ‘numeri’ [-Wunused-variable]
+   38 |  int numeri[MAX] = {0, 5, 10, 15, 20}; // inizializzazione array con valori
+      |      ^~~~~~
+Finished building: ../src/Test1.cpp
+ 
+Building target: Test1
+Invoking: GCC C++ Linker
+g++  -o "Test1"  ./src/Test1.o   
+Finished building target: Test1
+ 
+12:05:29 **** Incremental Build of configuration Debug for project Test1 ****
+make all 
+make: Nothing to be done for 'all'.
+12:05:46 **** Incremental Build of configuration Debug for project Test1 ****
+make all 
+Building file: ../src/Test1.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Test1.d" -MT"src/Test1.o" -o "src/Test1.o" "../src/Test1.cpp"
+../src/Test1.cpp: In function ‘void stampa(std::vector<float>)’:
+../src/Test1.cpp:24:19: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<float>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+   24 |  for(int i = 0; i < vettore.size(); i++)
+      |                 ~~^~~~~~~~~~~~~~~~
+../src/Test1.cpp: In function ‘int main()’:
+../src/Test1.cpp:38:6: warning: unused variable ‘numeri’ [-Wunused-variable]
+   38 |  int numeri[MAX] = {0, 5, 10, 15, 20}; // inizializzazione array con valori
+      |      ^~~~~~
+Finished building: ../src/Test1.cpp
+ 
+Building target: Test1
+Invoking: GCC C++ Linker
+g++  -o "Test1"  ./src/Test1.o   
+Finished building target: Test1
+ 
+12:05:47 **** Incremental Build of configuration Debug for project Test1 ****
+make all 
+make: Nothing to be done for 'all'.
+12:12:45 **** Incremental Build of configuration Debug for project Test1 ****
+make all 
+Building file: ../src/Test1.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Test1.d" -MT"src/Test1.o" -o "src/Test1.o" "../src/Test1.cpp"
+../src/Test1.cpp: In function ‘void stampa(std::vector<float>)’:
+../src/Test1.cpp:24:19: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<float>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+   24 |  for(int i = 0; i < vettore.size(); i++)
+      |                 ~~^~~~~~~~~~~~~~~~
+../src/Test1.cpp: At global scope:
+../src/Test1.cpp:28:17: error: declaration of ‘matrice’ as multidimensional array must have bounds for all dimensions except the first
+   28 | void stampa(int matrice[][]){
+      |                 ^~~~~~~
+../src/Test1.cpp: In function ‘void stampa(...)’:
+../src/Test1.cpp:31:5: error: ‘matrice’ was not declared in this scope
+   31 |     matrice[i][j] = rand()%100;
+      |     ^~~~~~~
+../src/Test1.cpp: At global scope:
+../src/Test1.cpp:42:24: error: declaration of ‘matrice’ as multidimensional array must have bounds for all dimensions except the first
+   42 | void riempiMatrice(int matrice[][]){
+      |                        ^~~~~~~
+../src/Test1.cpp: In function ‘void riempiMatrice(...)’:
+../src/Test1.cpp:46:4: error: ‘matrice’ was not declared in this scope
+   46 |    matrice[i][j] = rand()%100;
+      |    ^~~~~~~
+../src/Test1.cpp: In function ‘int main()’:
+../src/Test1.cpp:55:6: warning: unused variable ‘numeri’ [-Wunused-variable]
+   55 |  int numeri[MAX] = {0, 5, 10, 15, 20}; // inizializzazione array con valori
+      |      ^~~~~~
+make: *** [src/subdir.mk:20: src/Test1.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+12:14:52 **** Incremental Build of configuration Debug for project Test1 ****
+make all 
+Building file: ../src/Test1.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Test1.d" -MT"src/Test1.o" -o "src/Test1.o" "../src/Test1.cpp"
+../src/Test1.cpp: In function ‘void stampa(std::vector<float>)’:
+../src/Test1.cpp:24:19: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<float>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+   24 |  for(int i = 0; i < vettore.size(); i++)
+      |                 ~~^~~~~~~~~~~~~~~~
+../src/Test1.cpp: In function ‘int main()’:
+../src/Test1.cpp:55:6: warning: unused variable ‘numeri’ [-Wunused-variable]
+   55 |  int numeri[MAX] = {0, 5, 10, 15, 20}; // inizializzazione array con valori
+      |      ^~~~~~
+Finished building: ../src/Test1.cpp
+ 
+Building target: Test1
+Invoking: GCC C++ Linker
+g++  -o "Test1"  ./src/Test1.o   
+Finished building target: Test1
+ 
+12:14:55 **** Incremental Build of configuration Debug for project Test1 ****
+make all 
+make: Nothing to be done for 'all'.
+12:15:21 **** Incremental Build of configuration Debug for project Test1 ****
+make all 
+Building file: ../src/Test1.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Test1.d" -MT"src/Test1.o" -o "src/Test1.o" "../src/Test1.cpp"
+../src/Test1.cpp: In function ‘void stampa(std::vector<float>)’:
+../src/Test1.cpp:24:19: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<float>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+   24 |  for(int i = 0; i < vettore.size(); i++)
+      |                 ~~^~~~~~~~~~~~~~~~
+../src/Test1.cpp: In function ‘int main()’:
+../src/Test1.cpp:55:6: warning: unused variable ‘numeri’ [-Wunused-variable]
+   55 |  int numeri[MAX] = {0, 5, 10, 15, 20}; // inizializzazione array con valori
+      |      ^~~~~~
+Finished building: ../src/Test1.cpp
+ 
+Building target: Test1
+Invoking: GCC C++ Linker
+g++  -o "Test1"  ./src/Test1.o   
+Finished building target: Test1
+ 
+12:15:24 **** Incremental Build of configuration Debug for project Test1 ****
+make all 
+make: Nothing to be done for 'all'.
+12:15:36 **** Incremental Build of configuration Debug for project Test1 ****
+make all 
+Building file: ../src/Test1.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Test1.d" -MT"src/Test1.o" -o "src/Test1.o" "../src/Test1.cpp"
+../src/Test1.cpp: In function ‘void stampa(std::vector<float>)’:
+../src/Test1.cpp:24:19: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<float>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+   24 |  for(int i = 0; i < vettore.size(); i++)
+      |                 ~~^~~~~~~~~~~~~~~~
+../src/Test1.cpp: In function ‘int main()’:
+../src/Test1.cpp:55:6: warning: unused variable ‘numeri’ [-Wunused-variable]
+   55 |  int numeri[MAX] = {0, 5, 10, 15, 20}; // inizializzazione array con valori
+      |      ^~~~~~
+Finished building: ../src/Test1.cpp
+ 
+Building target: Test1
+Invoking: GCC C++ Linker
+g++  -o "Test1"  ./src/Test1.o   
+Finished building target: Test1
+ 
+12:15:51 **** Incremental Build of configuration Debug for project Test1 ****
+make all 
+Building file: ../src/Test1.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Test1.d" -MT"src/Test1.o" -o "src/Test1.o" "../src/Test1.cpp"
+../src/Test1.cpp: In function ‘void stampa(std::vector<float>)’:
+../src/Test1.cpp:24:19: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<float>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+   24 |  for(int i = 0; i < vettore.size(); i++)
+      |                 ~~^~~~~~~~~~~~~~~~
+../src/Test1.cpp: In function ‘void stampa(int (*)[5])’:
+../src/Test1.cpp:33:7: error: statement cannot resolve address of overloaded function
+   33 |   endl;
+      |       ^
+../src/Test1.cpp: In function ‘int main()’:
+../src/Test1.cpp:56:6: warning: unused variable ‘numeri’ [-Wunused-variable]
+   56 |  int numeri[MAX] = {0, 5, 10, 15, 20}; // inizializzazione array con valori
+      |      ^~~~~~
+make: *** [src/subdir.mk:20: src/Test1.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+12:16:02 **** Incremental Build of configuration Debug for project Test1 ****
+make all 
+Building file: ../src/Test1.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Test1.d" -MT"src/Test1.o" -o "src/Test1.o" "../src/Test1.cpp"
+../src/Test1.cpp: In function ‘void stampa(std::vector<float>)’:
+../src/Test1.cpp:24:19: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<float>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+   24 |  for(int i = 0; i < vettore.size(); i++)
+      |                 ~~^~~~~~~~~~~~~~~~
+../src/Test1.cpp: In function ‘int main()’:
+../src/Test1.cpp:56:6: warning: unused variable ‘numeri’ [-Wunused-variable]
+   56 |  int numeri[MAX] = {0, 5, 10, 15, 20}; // inizializzazione array con valori
+      |      ^~~~~~
+Finished building: ../src/Test1.cpp
+ 
+Building target: Test1
+Invoking: GCC C++ Linker
+g++  -o "Test1"  ./src/Test1.o   
+Finished building target: Test1
+ 
+12:16:05 **** Incremental Build of configuration Debug for project Test1 ****
+make all 
+make: Nothing to be done for 'all'.
+12:24:06 **** Incremental Build of configuration Debug for project Test1 ****
+make all 
+Building file: ../src/Test1.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Test1.d" -MT"src/Test1.o" -o "src/Test1.o" "../src/Test1.cpp"
+../src/Test1.cpp: In function ‘void stampa(std::vector<float>)’:
+../src/Test1.cpp:24:19: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<float>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+   24 |  for(int i = 0; i < vettore.size(); i++)
+      |                 ~~^~~~~~~~~~~~~~~~
+../src/Test1.cpp: In function ‘int main()’:
+../src/Test1.cpp:56:6: warning: unused variable ‘numeri’ [-Wunused-variable]
+   56 |  int numeri[MAX] = {0, 5, 10, 15, 20}; // inizializzazione array con valori
+      |      ^~~~~~
+Finished building: ../src/Test1.cpp
+ 
+Building target: Test1
+Invoking: GCC C++ Linker
+g++  -o "Test1"  ./src/Test1.o   
+Finished building target: Test1
+ 
+12:24:13 **** Incremental Build of configuration Debug for project Test1 ****
+make all 
+make: Nothing to be done for 'all'.
+12:27:54 **** Incremental Build of configuration Debug for project Test1 ****
+make all 
+Building file: ../src/Test1.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Test1.d" -MT"src/Test1.o" -o "src/Test1.o" "../src/Test1.cpp"
+../src/Test1.cpp: In function ‘void stampa(std::vector<float>)’:
+../src/Test1.cpp:24:19: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<float>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+   24 |  for(int i = 0; i < vettore.size(); i++)
+      |                 ~~^~~~~~~~~~~~~~~~
+../src/Test1.cpp: In function ‘int main()’:
+../src/Test1.cpp:90:67: error: lvalue required as left operand of assignment
+   90 |  int* arrayPuntatore = malloc(dim * sizeof(int)) = {3, 5, 7, 9, 10};
+      |                                                                   ^
+../src/Test1.cpp:56:6: warning: unused variable ‘numeri’ [-Wunused-variable]
+   56 |  int numeri[MAX] = {0, 5, 10, 15, 20}; // inizializzazione array con valori
+      |      ^~~~~~
+make: *** [src/subdir.mk:20: src/Test1.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+12:27:57 **** Incremental Build of configuration Debug for project Test1 ****
+make all 
+Building file: ../src/Test1.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Test1.d" -MT"src/Test1.o" -o "src/Test1.o" "../src/Test1.cpp"
+../src/Test1.cpp: In function ‘void stampa(std::vector<float>)’:
+../src/Test1.cpp:24:19: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<float>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+   24 |  for(int i = 0; i < vettore.size(); i++)
+      |                 ~~^~~~~~~~~~~~~~~~
+../src/Test1.cpp: In function ‘int main()’:
+../src/Test1.cpp:90:67: error: lvalue required as left operand of assignment
+   90 |  int* arrayPuntatore = malloc(dim * sizeof(int)) = {3, 5, 7, 9, 10};
+      |                                                                   ^
+../src/Test1.cpp:56:6: warning: unused variable ‘numeri’ [-Wunused-variable]
+   56 |  int numeri[MAX] = {0, 5, 10, 15, 20}; // inizializzazione array con valori
+      |      ^~~~~~
+make: *** [src/subdir.mk:20: src/Test1.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+12:28:22 **** Incremental Build of configuration Debug for project Test1 ****
+make all 
+Building file: ../src/Test1.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Test1.d" -MT"src/Test1.o" -o "src/Test1.o" "../src/Test1.cpp"
+../src/Test1.cpp: In function ‘void stampa(std::vector<float>)’:
+../src/Test1.cpp:24:19: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<float>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+   24 |  for(int i = 0; i < vettore.size(); i++)
+      |                 ~~^~~~~~~~~~~~~~~~
+../src/Test1.cpp: In function ‘int main()’:
+../src/Test1.cpp:90:30: error: invalid conversion from ‘void*’ to ‘int*’ [-fpermissive]
+   90 |  int* arrayPuntatore = malloc(dim * sizeof(int));
+      |                        ~~~~~~^~~~~~~~~~~~~~~~~~~
+      |                              |
+      |                              void*
+../src/Test1.cpp:56:6: warning: unused variable ‘numeri’ [-Wunused-variable]
+   56 |  int numeri[MAX] = {0, 5, 10, 15, 20}; // inizializzazione array con valori
+      |      ^~~~~~
+make: *** [src/subdir.mk:20: src/Test1.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+12:29:42 **** Incremental Build of configuration Debug for project Test1 ****
+make all 
+Building file: ../src/Test1.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Test1.d" -MT"src/Test1.o" -o "src/Test1.o" "../src/Test1.cpp"
+../src/Test1.cpp: In function ‘void stampa(std::vector<float>)’:
+../src/Test1.cpp:24:19: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<float>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+   24 |  for(int i = 0; i < vettore.size(); i++)
+      |                 ~~^~~~~~~~~~~~~~~~
+../src/Test1.cpp: In function ‘int main()’:
+../src/Test1.cpp:90:30: error: invalid conversion from ‘void*’ to ‘int*’ [-fpermissive]
+   90 |  int *arrayPuntatore = malloc(dim * sizeof(int));
+      |                        ~~~~~~^~~~~~~~~~~~~~~~~~~
+      |                              |
+      |                              void*
+../src/Test1.cpp:56:6: warning: unused variable ‘numeri’ [-Wunused-variable]
+   56 |  int numeri[MAX] = {0, 5, 10, 15, 20}; // inizializzazione array con valori
+      |      ^~~~~~
+make: *** [src/subdir.mk:20: src/Test1.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+12:30:11 **** Incremental Build of configuration Debug for project Test1 ****
+make all 
+Building file: ../src/Test1.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Test1.d" -MT"src/Test1.o" -o "src/Test1.o" "../src/Test1.cpp"
+../src/Test1.cpp: In function ‘void stampa(std::vector<float>)’:
+../src/Test1.cpp:24:19: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<float>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+   24 |  for(int i = 0; i < vettore.size(); i++)
+      |                 ~~^~~~~~~~~~~~~~~~
+../src/Test1.cpp: In function ‘int main()’:
+../src/Test1.cpp:56:6: warning: unused variable ‘numeri’ [-Wunused-variable]
+   56 |  int numeri[MAX] = {0, 5, 10, 15, 20}; // inizializzazione array con valori
+      |      ^~~~~~
+../src/Test1.cpp:89:6: warning: unused variable ‘dim’ [-Wunused-variable]
+   89 |  int dim = 5;
+      |      ^~~
+Finished building: ../src/Test1.cpp
+ 
+Building target: Test1
+Invoking: GCC C++ Linker
+g++  -o "Test1"  ./src/Test1.o   
+Finished building target: Test1
+ 
+12:30:15 **** Incremental Build of configuration Debug for project Test1 ****
+make all 
+make: Nothing to be done for 'all'.
+12:31:11 **** Incremental Build of configuration Debug for project Test1 ****
+make all 
+Building file: ../src/Test1.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Test1.d" -MT"src/Test1.o" -o "src/Test1.o" "../src/Test1.cpp"
+../src/Test1.cpp: In function ‘void stampa(std::vector<float>)’:
+../src/Test1.cpp:24:19: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<float>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+   24 |  for(int i = 0; i < vettore.size(); i++)
+      |                 ~~^~~~~~~~~~~~~~~~
+../src/Test1.cpp: In function ‘int main()’:
+../src/Test1.cpp:56:6: warning: unused variable ‘numeri’ [-Wunused-variable]
+   56 |  int numeri[MAX] = {0, 5, 10, 15, 20}; // inizializzazione array con valori
+      |      ^~~~~~
+Finished building: ../src/Test1.cpp
+ 
+Building target: Test1
+Invoking: GCC C++ Linker
+g++  -o "Test1"  ./src/Test1.o   
+Finished building target: Test1
+ 
+12:42:35 **** Incremental Build of configuration Debug for project Test1 ****
+make all 
+Building file: ../src/Test1.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Test1.d" -MT"src/Test1.o" -o "src/Test1.o" "../src/Test1.cpp"
+../src/Test1.cpp: In function ‘void stampa(std::vector<float>)’:
+../src/Test1.cpp:24:19: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<float>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+   24 |  for(int i = 0; i < vettore.size(); i++)
+      |                 ~~^~~~~~~~~~~~~~~~
+../src/Test1.cpp: In function ‘int main()’:
+../src/Test1.cpp:56:6: warning: unused variable ‘numeri’ [-Wunused-variable]
+   56 |  int numeri[MAX] = {0, 5, 10, 15, 20}; // inizializzazione array con valori
+      |      ^~~~~~
+Finished building: ../src/Test1.cpp
+ 
+Building target: Test1
+Invoking: GCC C++ Linker
+g++  -o "Test1"  ./src/Test1.o   
+Finished building target: Test1
+ 
+12:42:37 **** Incremental Build of configuration Debug for project Test1 ****
+make all 
+make: Nothing to be done for 'all'.
+12:51:14 **** Incremental Build of configuration Debug for project Test1 ****
+make all 
+Building file: ../src/Test1.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Test1.d" -MT"src/Test1.o" -o "src/Test1.o" "../src/Test1.cpp"
+In file included from ../src/Test1.cpp:14:
+../src/carrello.h:30:2: error: ‘list’ does not name a type
+   30 |  list<items_type> items_local;
+      |  ^~~~
+../src/Test1.cpp: In function ‘void stampa(std::vector<float>)’:
+../src/Test1.cpp:25:19: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<float>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+   25 |  for(int i = 0; i < vettore.size(); i++)
+      |                 ~~^~~~~~~~~~~~~~~~
+../src/Test1.cpp: In function ‘int main()’:
+../src/Test1.cpp:57:6: warning: unused variable ‘numeri’ [-Wunused-variable]
+   57 |  int numeri[MAX] = {0, 5, 10, 15, 20}; // inizializzazione array con valori
+      |      ^~~~~~
+make: *** [src/subdir.mk:23: src/Test1.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+12:51:59 **** Incremental Build of configuration Debug for project Test1 ****
+make all 
+Building file: ../src/Test1.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Test1.d" -MT"src/Test1.o" -o "src/Test1.o" "../src/Test1.cpp"
+In file included from ../src/Test1.cpp:14:
+../src/carrello.h:34:2: error: ‘list’ does not name a type
+   34 |  list<items_type> items_local;
+      |  ^~~~
+../src/Test1.cpp: In function ‘void stampa(std::vector<float>)’:
+../src/Test1.cpp:25:19: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<float>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+   25 |  for(int i = 0; i < vettore.size(); i++)
+      |                 ~~^~~~~~~~~~~~~~~~
+../src/Test1.cpp: In function ‘int main()’:
+../src/Test1.cpp:57:6: warning: unused variable ‘numeri’ [-Wunused-variable]
+   57 |  int numeri[MAX] = {0, 5, 10, 15, 20}; // inizializzazione array con valori
+      |      ^~~~~~
+make: *** [src/subdir.mk:23: src/Test1.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+12:52:29 **** Incremental Build of configuration Debug for project Test1 ****
+make all 
+Building file: ../src/Test1.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Test1.d" -MT"src/Test1.o" -o "src/Test1.o" "../src/Test1.cpp"
+In file included from ../src/Test1.cpp:14:
+../src/carrello.h:34:2: error: ‘list’ does not name a type
+   34 |  list<int> items_local;
+      |  ^~~~
+../src/Test1.cpp: In function ‘void stampa(std::vector<float>)’:
+../src/Test1.cpp:25:19: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<float>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+   25 |  for(int i = 0; i < vettore.size(); i++)
+      |                 ~~^~~~~~~~~~~~~~~~
+../src/Test1.cpp: In function ‘int main()’:
+../src/Test1.cpp:57:6: warning: unused variable ‘numeri’ [-Wunused-variable]
+   57 |  int numeri[MAX] = {0, 5, 10, 15, 20}; // inizializzazione array con valori
+      |      ^~~~~~
+make: *** [src/subdir.mk:23: src/Test1.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+12:53:17 **** Incremental Build of configuration Debug for project Test1 ****
+make all 
+Building file: ../src/Test1.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Test1.d" -MT"src/Test1.o" -o "src/Test1.o" "../src/Test1.cpp"
+../src/Test1.cpp: In function ‘void stampa(std::vector<float>)’:
+../src/Test1.cpp:25:19: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<float>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+   25 |  for(int i = 0; i < vettore.size(); i++)
+      |                 ~~^~~~~~~~~~~~~~~~
+../src/Test1.cpp: In function ‘int main()’:
+../src/Test1.cpp:57:6: warning: unused variable ‘numeri’ [-Wunused-variable]
+   57 |  int numeri[MAX] = {0, 5, 10, 15, 20}; // inizializzazione array con valori
+      |      ^~~~~~
+Finished building: ../src/Test1.cpp
+ 
+Building file: ../src/carrello.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/carrello.d" -MT"src/carrello.o" -o "src/carrello.o" "../src/carrello.cpp"
+Finished building: ../src/carrello.cpp
+ 
+Building target: Test1
+Invoking: GCC C++ Linker
+g++  -o "Test1"  ./src/Test1.o ./src/carrello.o   
+Finished building target: Test1
+ 
+12:55:37 **** Incremental Build of configuration Debug for project Test1 ****
+make all 
+Building file: ../src/Test1.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Test1.d" -MT"src/Test1.o" -o "src/Test1.o" "../src/Test1.cpp"
+../src/Test1.cpp: In function ‘void stampa(std::vector<float>)’:
+../src/Test1.cpp:25:19: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<float>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+   25 |  for(int i = 0; i < vettore.size(); i++)
+      |                 ~~^~~~~~~~~~~~~~~~
+../src/Test1.cpp: In function ‘int main()’:
+../src/Test1.cpp:57:6: warning: unused variable ‘numeri’ [-Wunused-variable]
+   57 |  int numeri[MAX] = {0, 5, 10, 15, 20}; // inizializzazione array con valori
+      |      ^~~~~~
+Finished building: ../src/Test1.cpp
+ 
+Building target: Test1
+Invoking: GCC C++ Linker
+g++  -o "Test1"  ./src/Test1.o ./src/carrello.o   
+Finished building target: Test1
+ 

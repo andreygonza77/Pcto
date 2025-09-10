@@ -1,0 +1,17 @@
+/*
+ * carrello.h
+ *
+ *  Created on: Sep 8, 2025
+ *      Author: fisitronpassdynamics
+ */
+
+#ifndef CARRELLO_H_
+#define CARRELLO_H_
+
+class carrello {
+public:
+	carrello();
+	virtual ~carrello();
+};
+
+#endif /* CARRELLO_H_ */

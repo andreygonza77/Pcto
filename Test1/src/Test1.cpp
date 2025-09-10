@@ -1,0 +1,111 @@
+//============================================================================
+// Name        : Test1.cpp
+// Author      : 
+// Version     :
+// Copyright   : Your copyright notice
+// Description : Hello World in C++, Ansi-style
+//============================================================================
+
+#include <iostream>
+#include <vector>
+#include <list>
+#include <cstdlib>
+#include <ctime>
+#include "carrello.h"
+
+using namespace std;
+const int MAX = 5;
+
+void stampa(int array[]){
+	for(int i = 0; i < MAX; i++)
+		cout << "Posizione " << i << ": " << array[i] << endl;
+}
+
+void stampa(vector<float> vettore){
+	for(int i = 0; i < vettore.size(); i++)
+		cout << vettore[i] << endl;
+}
+
+void stampa(int matrice[][MAX]){
+	for(int i = 0; i < MAX; i++){
+		for(int j = 0; j < MAX; j++){
+			cout << matrice[i][j] << endl;
+		}
+		cout << endl;
+	}
+}
+
+void riempiArray(int array[]){
+	srand(time(NULL));
+	for(int i = 0; i < MAX; i++)
+		array[i] = rand()%100;
+}
+
+void riempiMatrice(int matrice[][MAX]){
+	srand(time(NULL));
+	for(int i = 0; i < MAX; i++){
+		for(int j = 0; j < MAX; j++){
+			matrice[i][j] = rand()%100;
+		}
+	}
+}
+
+int main() {
+	cout << "!!!Hello World!!!" << endl; // prints !!!Hello World!!!
+
+	cout << "----------Array----------" << endl;
+	int numeri[MAX] = {0, 5, 10, 15, 20}; // inizializzazione array con valori
+	int arrayEsempio[MAX]; //inizializzazione array "vuoto"
+	// uso di funzioni
+	riempiArray(arrayEsempio);
+	stampa(arrayEsempio);
+
+	cout << "----------Vettori----------" << endl;
+	vector<float> vettoreEsempio = {7.7, 12.2, 24.11};
+	cout << "Prima posizione " << vettoreEsempio.front() << endl;
+	cout << "Ultima posizione " << vettoreEsempio.back() << endl;
+	stampa(vettoreEsempio);
+
+	cout << "----------List----------" << endl;
+	list<string> listEsempio = {"Firenze", "Roma", "Milano"};
+
+	cout << "Lista iniziale" << endl;
+	for(string s : listEsempio) cout << s << endl;
+
+	listEsempio.back() = "Venezia";
+	listEsempio.push_back("Milano");
+
+	cout << "Lista cambiata" << endl;
+	for(string s : listEsempio) cout << s << endl;
+
+	cout << "----------Matrice----------" << endl;
+	int matriceEsempio[MAX][MAX];
+	riempiMatrice(matriceEsempio);
+	stampa(matriceEsempio);
+
+	cout << "----------Puntatori----------" << endl;
+	int n = 7;
+	int* puntatore = &n; //copia indirizzo di memoria di 'n'
+	cout << n << endl; cout << &n << endl; cout << puntatore << endl; // comparazione
+
+
+
+
+	carrello* carrelloinstance;
+	carrelloinstance = new carrello();
+
+	carrelloinstance->aggiunta_item(FRUTTA);
+
+
+	/*int dim = 5;
+	int* arrayPuntatore = malloc(dim * sizeof(int));
+	for(int i = 0; i < dim; i++){
+		cout << arrayPuntatore[i];
+	}
+	free(arrayPuntatore);
+	arrayPuntatore = NULL;*/
+
+	return 0;
+}
+
+

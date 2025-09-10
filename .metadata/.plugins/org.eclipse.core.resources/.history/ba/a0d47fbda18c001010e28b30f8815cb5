@@ -1,0 +1,24 @@
+/*
+ * carrello.cpp
+ *
+ *  Created on: Sep 8, 2025
+ *      Author: fisitronpassdynamics
+ */
+
+#include "carrello.h"
+
+carrello::carrello() {
+	// TODO Auto-generated constructor stub
+
+}
+
+carrello::~carrello() {
+	// TODO Auto-generated destructor stub
+}
+
+void carrello::aggiunta_item(items_type it)
+{
+
+}
+
+
