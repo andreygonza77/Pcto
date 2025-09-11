@@ -21,15 +21,15 @@ import java.net.http.*;
  */
 public class Gui extends JFrame {
     private JTextField link;
-    private JButton get;
-    private JButton post;
+    private JButton get, post, relay1, relay2, relay3, relay4, relay5, relay6;
     private JScrollPane areaResponse;
     private JTextArea response;
     private String responseBody;
+    private JToggleButton[] releButtons = new JToggleButton[6];
     
     //POST
     private JTextField accensioneRele, numRele;
-
+    
     public String getAccensioneRele() {
         return accensioneRele.getText();
     }
@@ -45,8 +45,6 @@ public class Gui extends JFrame {
     public void setNumRele(String numRele) {
         this.numRele.setText(numRele);
     }
-    
-    
     
     
     
@@ -73,12 +71,30 @@ public class Gui extends JFrame {
         JPanel inputRele = new JPanel();
         numRele = new JTextField("Inserisci numero del Rele [1-6]");
         accensioneRele = new JTextField("Inserisci 1 per accenderlo, 0 spengerlo");
-        
+          
         inputRele.add(numRele); inputRele.add(accensioneRele);
         
         input.add(link); input.add(get); input.add(post);
         output.add(areaResponse, BorderLayout.CENTER);
         
+        // FisitronHUB 
+        JPanel relePanel = new JPanel(new GridLayout(1, 6, 5, 5));
+        for (int i = 0; i < 6; i++) {
+            int releNum = i + 1;
+            releButtons[i] = new JToggleButton("R" + releNum);
+            releButtons[i].setFocusPainted(false);
+            releButtons[i].addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    boolean isOn = releButtons[releNum - 1].isSelected();
+                    String command = String.format("RELE[%d][%d]", releNum, isOn ? 1 : 0);
+                    link.setText(urlPost);
+                    setData(command);
+                }
+            });
+            relePanel.add(releButtons[i]);
+        }
+        //
         
         get.addActionListener(new ActionListener(){
             @Override
@@ -104,12 +120,12 @@ public class Gui extends JFrame {
             }
         });
         
-      
+        
         
         frmContentPane.setLayout(new BorderLayout());
         frmContentPane.add(input, BorderLayout.NORTH);
         frmContentPane.add(output, BorderLayout.CENTER);
-        frmContentPane.add(inputRele, BorderLayout.SOUTH);
+        frmContentPane.add(relePanel, BorderLayout.SOUTH);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.setVisible(true);
     }
