@@ -25,16 +25,12 @@ public class Gui extends JFrame {
     private JTextArea response;
     private String responseBody;
     
-    
     //POST
     private String value1, value2, value3, value4, value5, value6; //futuro input dell'utente
     private JRadioButton button1, button2, button3, button4, button5, button6; // 
     
-    //costanti
-    //final String v1 = "1";
-    //String fi
-    String urlGet = "http:/10.100.0.77/get_rele_status";
-    String urlPost = "http:/10.100.0.77/set_rele";
+    String urlGet = "http://10.100.0.77/get_rele_status";
+    String urlPost = "http://10.100.0.77/set_rele";
     
     public Gui() {
         super("Test HttpClient");
@@ -78,8 +74,6 @@ public class Gui extends JFrame {
                     }
                 }
             }
-        
-        
         });
         
         frmContentPane.setLayout(new BorderLayout());
@@ -93,7 +87,7 @@ public class Gui extends JFrame {
     public void getData(){
         String urlString = link.getText().trim();
         if (urlString.isEmpty() || !isValidUrl(urlString)) {
-            setResponse("Per favore, inserisci un URL valido");
+            setResponse("Errore: inserire un URL valido");
             return;
         }
         HttpClient client = HttpClient.newHttpClient();
@@ -105,50 +99,52 @@ public class Gui extends JFrame {
         try{ 
             HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
             System.out.println("Stato codice: " + response.statusCode());
-            System.out.println("Response Body: " + response.body());
-            System.out.println("Version: " + response.version());
+            System.out.println("Risposta: " + response.body());
+            System.out.println("Versione: " + response.version());
+            System.out.println("Header: " + response.headers());
         
-            setResponse("Stato codice: " + response.statusCode() + "\nRisposta body: " + response.body() + "\nVersione: " + response.version());
+            setResponse("Stato codice: " + response.statusCode() + "\nRisposta: " + response.body() + "\nVersione: " + response.version());
         }
         catch(Exception e){
             e.printStackTrace();
-            setResponse("Errore durante la richiesta: " + e.getMessage());
+            setResponse("Errore: " + e.getMessage());
         }
     }
     
     public void setData(){
         String urlString = link.getText().trim();
         if (urlString.isEmpty() || !isValidUrl(urlString)) {
-            setResponse("Per favore, inserisci un URL valido");
+            setResponse("Errore: inserire un URL valido");
             return;
         }
         
         String v1 = "1";
-        String v2 = "1";
-        String v3 = "1";
-        String v4 = "1";
-        String v5 = "1";
-        String v6 = "0";
+        String v2 = "0";
+        String v3 = "0";
+        String v4 = "0";
+        String v5 = "0";
+        String v6 = "1";
         
         String values = v1 + "," + v2 + "," + v3 + "," + v4 + "," + v5 + "," + v6;
         
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder()
                             .uri(URI.create(urlString))
+                            .header("content-type", "text/html")
                             .POST(HttpRequest.BodyPublishers.ofString(values))
                             .version(HttpClient.Version.HTTP_1_1)
                             .build();
         try{
             HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
             System.out.println("Stato codice: " + response.statusCode());
-            System.out.println("Response Body: " + response.body());
-            System.out.println("Version: " + response.version());
+            System.out.println("Risposta: " + response.body()); 
+            System.out.println("Versione: " + response.version());
             
-            setResponse("Stato codice: " + response.statusCode() + "\nRisposta body: " + response.body() + "\nVersione: " + response.version());
+            setResponse("Stato codice: " + response.statusCode() + "\nRisposta: " + response.body() + "\nVersione: " + response.version());
         }
         catch(Exception e){
             e.printStackTrace();
-            setResponse("Errore durante la richiesta: " + e.getMessage());
+            setResponse("Errore: " + e.getMessage());
         }
     }
 
@@ -165,10 +161,3 @@ public class Gui extends JFrame {
         }
     }
 }
-
-    
-    
-    
-            
-           
-    
