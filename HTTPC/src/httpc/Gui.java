@@ -13,6 +13,8 @@ import java.net.URI;
 import javax.swing.*;
 import java.net.http.*;
 
+
+// RELE[n][0/1]
 /**
  *
  * @author fisitronpassdynamics
@@ -26,12 +28,31 @@ public class Gui extends JFrame {
     private String responseBody;
     
     //POST
-    private String value1, value2, value3, value4, value5, value6; //futuro input dell'utente
-    private JRadioButton button1, button2, button3, button4, button5, button6; // 
+    private JTextField accensioneRele, numRele;
+
+    public String getAccensioneRele() {
+        return accensioneRele.getText();
+    }
+
+    public void setAccensioneRele(String accensioneRele) {
+        this.accensioneRele.setText(accensioneRele);
+    }
+
+    public String getNumRele() {
+        return numRele.getText();
+    }
+
+    public void setNumRele(String numRele) {
+        this.numRele.setText(numRele);
+    }
+    
+    
+    
+    
     
     String urlGet = "http://10.100.0.77/get_rele_status";
     String urlPost = "http://10.100.0.77/set_rele";
-    
+    String command = "RELE[1][0]";
     public Gui() {
         super("Test HttpClient");
         Container frmContentPane = this.getContentPane();
@@ -49,8 +70,15 @@ public class Gui extends JFrame {
         JPanel output = new JPanel();
         output.setLayout(new BorderLayout());
         
+        JPanel inputRele = new JPanel();
+        numRele = new JTextField("Inserisci numero del Rele [1-6]");
+        accensioneRele = new JTextField("Inserisci 1 per accenderlo, 0 spengerlo");
+        
+        inputRele.add(numRele); inputRele.add(accensioneRele);
+        
         input.add(link); input.add(get); input.add(post);
         output.add(areaResponse, BorderLayout.CENTER);
+        
         
         get.addActionListener(new ActionListener(){
             @Override
@@ -70,16 +98,18 @@ public class Gui extends JFrame {
                 if(ae.getSource() instanceof JButton){
                     JButton b = (JButton)ae.getSource();
                     if(b.getText().equals("POST")){
-                        setData();
+                        setData(getCommand());
                     }
                 }
             }
         });
         
+      
+        
         frmContentPane.setLayout(new BorderLayout());
         frmContentPane.add(input, BorderLayout.NORTH);
         frmContentPane.add(output, BorderLayout.CENTER);
-        
+        frmContentPane.add(inputRele, BorderLayout.SOUTH);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.setVisible(true);
     }
@@ -109,29 +139,37 @@ public class Gui extends JFrame {
             e.printStackTrace();
             setResponse("Errore: " + e.getMessage());
         }
+    }    
+   
+    public String getCommand(){
+        String numRele = getNumRele().trim();
+        String accensioneRele = getAccensioneRele().trim();
+        
+        if (!numRele.matches("[1-6]")) {
+            setResponse("Errore: il numero del relè deve essere tra 1 e 6.");
+            return "";
+        }
+        
+        if (!accensioneRele.equals("0") && !accensioneRele.equals("1")) {
+            setResponse("Errore: inserisci 0 per spegnere o 1 per accendere.");
+            return "";
+        }
+        
+        return String.format("RELE[%s][%s]", numRele, accensioneRele);
     }
-    
-    public void setData(){
+    public void setData(String s){
         String urlString = link.getText().trim();
         if (urlString.isEmpty() || !isValidUrl(urlString)) {
             setResponse("Errore: inserire un URL valido");
             return;
         }
         
-        String v1 = "1";
-        String v2 = "0";
-        String v3 = "0";
-        String v4 = "0";
-        String v5 = "0";
-        String v6 = "1";
-        
-        String values = v1 + "," + v2 + "," + v3 + "," + v4 + "," + v5 + "," + v6;
         
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder()
                             .uri(URI.create(urlString))
                             .header("content-type", "text/html")
-                            .POST(HttpRequest.BodyPublishers.ofString(values))
+                            .POST(HttpRequest.BodyPublishers.ofString(s))
                             .version(HttpClient.Version.HTTP_1_1)
                             .build();
         try{
@@ -140,7 +178,7 @@ public class Gui extends JFrame {
             System.out.println("Risposta: " + response.body()); 
             System.out.println("Versione: " + response.version());
             
-            setResponse("Stato codice: " + response.statusCode() + "\nRisposta: " + response.body() + "\nVersione: " + response.version());
+            setResponse("Stato codice: " + response.statusCode() + "\nUltimo rele acceso: " + response.body() + "\nVersione: " + response.version());
         }
         catch(Exception e){
             e.printStackTrace();

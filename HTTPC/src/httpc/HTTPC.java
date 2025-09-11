@@ -22,24 +22,6 @@ public class HTTPC {
         // http://10.100.0.77/set_rele
         // FisitronHUB nome rete
         // Fisitron319086 password
-        // risposta: stato
-        
-        
-        
-        
-        /*String URL = "https://alexwohlbruck.github.io/cat-facts/";
-         HttpClient client = HttpClient.newHttpClient();
-         HttpRequest request = HttpRequest.newBuilder()
-                            .uri(URI.create(URL))
-                            .build();
-         try{
-             HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
-             System.out.println("Stato codice: " + response.statusCode());
-             System.out.println("Response Body: " + response.body());
-         }
-         catch(Exception e){
-             e.printStackTrace();
-            }*/
          }
     }
-    
+  
