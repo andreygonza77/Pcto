@@ -58,7 +58,7 @@ public class Gui extends JFrame {
         output.add(relays, BorderLayout.SOUTH);
        
         inputPanel.add(input, BorderLayout.NORTH);
-       // inputPanel.add(inputRele, BorderLayout.CENTER);
+        // inputPanel.add(inputRele, BorderLayout.CENTER);
        
         // FisitronHUB
         JPanel relePanel = new JPanel(new GridLayout(1, 6, 5, 5));

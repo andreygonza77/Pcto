@@ -1,23 +1,6 @@
-12:55:37 **** Incremental Build of configuration Debug for project Test1 ****
+14:17:29 **** Incremental Build of configuration Debug for project Test1 ****
 make all 
-Building file: ../src/Test1.cpp
-Invoking: GCC C++ Compiler
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Test1.d" -MT"src/Test1.o" -o "src/Test1.o" "../src/Test1.cpp"
-../src/Test1.cpp: In function ‘void stampa(std::vector<float>)’:
-../src/Test1.cpp:25:19: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<float>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
-   25 |  for(int i = 0; i < vettore.size(); i++)
-      |                 ~~^~~~~~~~~~~~~~~~
-../src/Test1.cpp: In function ‘int main()’:
-../src/Test1.cpp:57:6: warning: unused variable ‘numeri’ [-Wunused-variable]
-   57 |  int numeri[MAX] = {0, 5, 10, 15, 20}; // inizializzazione array con valori
-      |      ^~~~~~
-Finished building: ../src/Test1.cpp
- 
-Building target: Test1
-Invoking: GCC C++ Linker
-g++  -o "Test1"  ./src/Test1.o ./src/carrello.o   
-Finished building target: Test1
- 
+make: Nothing to be done for 'all'.
 
-12:55:38 Build Finished. 0 errors, 2 warnings. (took 1s.29ms)
+14:17:30 Build Finished. 0 errors, 0 warnings. (took 71ms)
 

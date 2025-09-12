@@ -983,3 +983,508 @@ Invoking: GCC C++ Linker
 g++  -o "Test1"  ./src/Test1.o ./src/carrello.o   
 Finished building target: Test1
  
+11:19:37 **** Incremental Build of configuration Debug for project Test1 ****
+make all 
+Building file: ../src/Test1.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Test1.d" -MT"src/Test1.o" -o "src/Test1.o" "../src/Test1.cpp"
+../src/Test1.cpp: In function ‘void stampa(std::vector<float>)’:
+../src/Test1.cpp:25:19: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<float>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+   25 |  for(int i = 0; i < vettore.size(); i++)
+      |                 ~~^~~~~~~~~~~~~~~~
+../src/Test1.cpp: In function ‘int main()’:
+../src/Test1.cpp:57:6: warning: unused variable ‘numeri’ [-Wunused-variable]
+   57 |  int numeri[MAX] = {0, 5, 10, 15, 20}; // inizializzazione array con valori
+      |      ^~~~~~
+Finished building: ../src/Test1.cpp
+ 
+Building file: ../src/carrello.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/carrello.d" -MT"src/carrello.o" -o "src/carrello.o" "../src/carrello.cpp"
+Finished building: ../src/carrello.cpp
+ 
+Building target: Test1
+Invoking: GCC C++ Linker
+g++  -o "Test1"  ./src/Test1.o ./src/carrello.o   
+Finished building target: Test1
+ 
+11:19:42 **** Incremental Build of configuration Debug for project Test1 ****
+make all 
+make: Nothing to be done for 'all'.
+11:20:24 **** Incremental Build of configuration Debug for project Test1 ****
+make all 
+make: Nothing to be done for 'all'.
+11:22:31 **** Incremental Build of configuration Debug for project Test1 ****
+make all 
+make: Nothing to be done for 'all'.
+11:24:06 **** Incremental Build of configuration Debug for project Test1 ****
+make all 
+make: Nothing to be done for 'all'.
+11:26:59 **** Build of configuration Debug for project HTTPSERVER ****
+make all 
+Building file: ../src/HTTPSERVER.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/HTTPSERVER.d" -MT"src/HTTPSERVER.o" -o "src/HTTPSERVER.o" "../src/HTTPSERVER.cpp"
+Finished building: ../src/HTTPSERVER.cpp
+ 
+Building target: HTTPSERVER
+Invoking: GCC C++ Linker
+g++  -o "HTTPSERVER"  ./src/HTTPSERVER.o   
+Finished building target: HTTPSERVER
+ 
+11:27:05 **** Incremental Build of configuration Debug for project HTTPSERVER ****
+make all 
+make: Nothing to be done for 'all'.
+11:27:08 **** Incremental Build of configuration Debug for project HTTPSERVER ****
+make all 
+make: Nothing to be done for 'all'.
+11:27:36 **** Incremental Build of configuration Debug for project HTTPSERVER ****
+make all 
+Building file: ../src/HTTPSERVER.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/HTTPSERVER.d" -MT"src/HTTPSERVER.o" -o "src/HTTPSERVER.o" "../src/HTTPSERVER.cpp"
+../src/HTTPSERVER.cpp:17:7: error: ‘String’ does not name a type
+   17 | const String http_response =
+      |       ^~~~~~
+make: *** [src/subdir.mk:20: src/HTTPSERVER.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+11:27:54 **** Incremental Build of configuration Debug for project HTTPSERVER ****
+make all 
+Building file: ../src/HTTPSERVER.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/HTTPSERVER.d" -MT"src/HTTPSERVER.o" -o "src/HTTPSERVER.o" "../src/HTTPSERVER.cpp"
+Finished building: ../src/HTTPSERVER.cpp
+ 
+Building target: HTTPSERVER
+Invoking: GCC C++ Linker
+g++  -o "HTTPSERVER"  ./src/HTTPSERVER.o   
+/usr/bin/ld: ./src/HTTPSERVER.o: in function `boost::asio::detail::posix_thread::~posix_thread()':
+/usr/include/boost/asio/detail/impl/posix_thread.ipp:35: undefined reference to `pthread_detach'
+/usr/bin/ld: ./src/HTTPSERVER.o: in function `boost::asio::detail::posix_thread::join()':
+/usr/include/boost/asio/detail/impl/posix_thread.ipp:42: undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make: *** [makefile:67: HTTPSERVER] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+11:28:57 **** Incremental Build of configuration Debug for project HTTPSERVER ****
+make all 
+Building file: ../src/HTTPSERVER.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/HTTPSERVER.d" -MT"src/HTTPSERVER.o" -o "src/HTTPSERVER.o" "../src/HTTPSERVER.cpp"
+Finished building: ../src/HTTPSERVER.cpp
+ 
+Building target: HTTPSERVER
+Invoking: GCC C++ Linker
+g++  -o "HTTPSERVER"  ./src/HTTPSERVER.o   
+Finished building target: HTTPSERVER
+ 
+11:29:17 **** Incremental Build of configuration Debug for project HTTPSERVER ****
+make all 
+Building file: ../src/HTTPSERVER.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/HTTPSERVER.d" -MT"src/HTTPSERVER.o" -o "src/HTTPSERVER.o" "../src/HTTPSERVER.cpp"
+Finished building: ../src/HTTPSERVER.cpp
+ 
+Building target: HTTPSERVER
+Invoking: GCC C++ Linker
+g++  -o "HTTPSERVER"  ./src/HTTPSERVER.o   
+Finished building target: HTTPSERVER
+ 
+11:29:18 **** Incremental Build of configuration Debug for project HTTPSERVER ****
+make all 
+make: Nothing to be done for 'all'.
+11:30:25 **** Clean-only build of configuration Debug for project HTTPSERVER ****
+make clean 
+rm -rf ./src/HTTPSERVER.d ./src/HTTPSERVER.o
+rm -rf HTTPSERVER
+ 
+11:30:25 **** Clean-only build of configuration Debug for project Test1 ****
+make clean 
+rm -rf ./src/Test1.d ./src/Test1.o ./src/carrello.d ./src/carrello.o
+rm -rf Test1
+ 
+11:30:26 **** Build of configuration Debug for project HTTPSERVER ****
+make all 
+Building file: ../src/HTTPSERVER.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/HTTPSERVER.d" -MT"src/HTTPSERVER.o" -o "src/HTTPSERVER.o" "../src/HTTPSERVER.cpp"
+Finished building: ../src/HTTPSERVER.cpp
+ 
+Building target: HTTPSERVER
+Invoking: GCC C++ Linker
+g++  -o "HTTPSERVER"  ./src/HTTPSERVER.o   
+Finished building target: HTTPSERVER
+ 
+11:30:27 **** Build of configuration Debug for project HTTPServer ****
+make all 
+Building file: ../src/HTTPServer.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/HTTPServer.d" -MT"src/HTTPServer.o" -o "src/HTTPServer.o" "../src/HTTPServer.cpp"
+Finished building: ../src/HTTPServer.cpp
+ 
+Building target: HTTPServer
+Invoking: Cross G++ Linker
+g++  -o "HTTPServer"  ./src/HTTPServer.o   
+Finished building target: HTTPServer
+ 
+11:30:28 **** Build of configuration Debug for project Test1 ****
+make all 
+Building file: ../src/Test1.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Test1.d" -MT"src/Test1.o" -o "src/Test1.o" "../src/Test1.cpp"
+../src/Test1.cpp: In function ‘void stampa(std::vector<float>)’:
+../src/Test1.cpp:25:19: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<float>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+   25 |  for(int i = 0; i < vettore.size(); i++)
+      |                 ~~^~~~~~~~~~~~~~~~
+../src/Test1.cpp: In function ‘int main()’:
+../src/Test1.cpp:57:6: warning: unused variable ‘numeri’ [-Wunused-variable]
+   57 |  int numeri[MAX] = {0, 5, 10, 15, 20}; // inizializzazione array con valori
+      |      ^~~~~~
+Finished building: ../src/Test1.cpp
+ 
+Building file: ../src/carrello.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/carrello.d" -MT"src/carrello.o" -o "src/carrello.o" "../src/carrello.cpp"
+Finished building: ../src/carrello.cpp
+ 
+Building target: Test1
+Invoking: GCC C++ Linker
+g++  -o "Test1"  ./src/Test1.o ./src/carrello.o   
+Finished building target: Test1
+ 
+11:30:34 **** Incremental Build of configuration Debug for project HTTPSERVER ****
+make all 
+make: Nothing to be done for 'all'.
+11:30:37 **** Incremental Build of configuration Debug for project HTTPSERVER ****
+make all 
+make: Nothing to be done for 'all'.
+11:31:57 **** Incremental Build of configuration Debug for project HTTPSERVER ****
+make all 
+make: Nothing to be done for 'all'.
+11:32:12 **** Incremental Build of configuration Debug for project HTTPSERVER ****
+make all 
+Building file: ../src/HTTPSERVER.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/HTTPSERVER.d" -MT"src/HTTPSERVER.o" -o "src/HTTPSERVER.o" "../src/HTTPSERVER.cpp"
+Finished building: ../src/HTTPSERVER.cpp
+ 
+Building target: HTTPSERVER
+Invoking: GCC C++ Linker
+g++  -o "HTTPSERVER"  ./src/HTTPSERVER.o   
+/usr/bin/ld: ./src/HTTPSERVER.o: in function `boost::asio::detail::posix_thread::~posix_thread()':
+/usr/include/boost/asio/detail/impl/posix_thread.ipp:35: undefined reference to `pthread_detach'
+/usr/bin/ld: ./src/HTTPSERVER.o: in function `boost::asio::detail::posix_thread::join()':
+/usr/include/boost/asio/detail/impl/posix_thread.ipp:42: undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make: *** [makefile:67: HTTPSERVER] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+11:32:34 **** Incremental Build of configuration Debug for project HTTPSERVER ****
+make all 
+Building target: HTTPSERVER
+Invoking: GCC C++ Linker
+g++  -o "HTTPSERVER"  ./src/HTTPSERVER.o   
+/usr/bin/ld: ./src/HTTPSERVER.o: in function `boost::asio::detail::posix_thread::~posix_thread()':
+/usr/include/boost/asio/detail/impl/posix_thread.ipp:35: undefined reference to `pthread_detach'
+/usr/bin/ld: ./src/HTTPSERVER.o: in function `boost::asio::detail::posix_thread::join()':
+/usr/include/boost/asio/detail/impl/posix_thread.ipp:42: undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make: *** [makefile:67: HTTPSERVER] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+11:34:48 **** Clean-only build of configuration Debug for project HTTPSERVER ****
+make clean 
+rm -rf ./src/HTTPSERVER.d ./src/HTTPSERVER.o
+rm -rf HTTPSERVER
+ 
+11:34:48 **** Build of configuration Debug for project HTTPSERVER ****
+make all 
+Building file: ../src/HTTPSERVER.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/HTTPSERVER.d" -MT"src/HTTPSERVER.o" -o "src/HTTPSERVER.o" "../src/HTTPSERVER.cpp"
+Finished building: ../src/HTTPSERVER.cpp
+ 
+Building target: HTTPSERVER
+Invoking: GCC C++ Linker
+g++  -o "HTTPSERVER"  ./src/HTTPSERVER.o   
+/usr/bin/ld: ./src/HTTPSERVER.o: in function `boost::asio::detail::posix_thread::~posix_thread()':
+/usr/include/boost/asio/detail/impl/posix_thread.ipp:35: undefined reference to `pthread_detach'
+/usr/bin/ld: ./src/HTTPSERVER.o: in function `boost::asio::detail::posix_thread::join()':
+/usr/include/boost/asio/detail/impl/posix_thread.ipp:42: undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make: *** [makefile:67: HTTPSERVER] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+11:34:51 **** Incremental Build of configuration Debug for project HTTPServer ****
+make all 
+make: Nothing to be done for 'all'.
+11:34:51 **** Incremental Build of configuration Debug for project Test1 ****
+make all 
+make: Nothing to be done for 'all'.
+11:35:00 **** Incremental Build of configuration Debug for project HTTPSERVER ****
+make all 
+Building target: HTTPSERVER
+Invoking: GCC C++ Linker
+g++  -o "HTTPSERVER"  ./src/HTTPSERVER.o   
+/usr/bin/ld: ./src/HTTPSERVER.o: in function `boost::asio::detail::posix_thread::~posix_thread()':
+/usr/include/boost/asio/detail/impl/posix_thread.ipp:35: undefined reference to `pthread_detach'
+/usr/bin/ld: ./src/HTTPSERVER.o: in function `boost::asio::detail::posix_thread::join()':
+/usr/include/boost/asio/detail/impl/posix_thread.ipp:42: undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make: *** [makefile:67: HTTPSERVER] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+11:36:02 **** Clean-only build of configuration Debug for project HTTPSERVER ****
+make clean 
+rm -rf ./src/HTTPSERVER.d ./src/HTTPSERVER.o
+rm -rf HTTPSERVER
+ 
+11:36:02 **** Build of configuration Debug for project HTTPSERVER ****
+make all 
+Building file: ../src/HTTPSERVER.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/HTTPSERVER.d" -MT"src/HTTPSERVER.o" -o "src/HTTPSERVER.o" "../src/HTTPSERVER.cpp"
+Finished building: ../src/HTTPSERVER.cpp
+ 
+Building target: HTTPSERVER
+Invoking: GCC C++ Linker
+g++  -o "HTTPSERVER"  ./src/HTTPSERVER.o   
+/usr/bin/ld: ./src/HTTPSERVER.o: in function `boost::asio::detail::posix_thread::~posix_thread()':
+/usr/include/boost/asio/detail/impl/posix_thread.ipp:35: undefined reference to `pthread_detach'
+/usr/bin/ld: ./src/HTTPSERVER.o: in function `boost::asio::detail::posix_thread::join()':
+/usr/include/boost/asio/detail/impl/posix_thread.ipp:42: undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make: *** [makefile:67: HTTPSERVER] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+11:36:30 **** Incremental Build of configuration Debug for project Test1 ****
+make all 
+make: Nothing to be done for 'all'.
+11:42:05 **** Incremental Build of configuration Debug for project Test1 ****
+make all 
+make: Nothing to be done for 'all'.
+11:44:02 **** Build of configuration Debug for project Httpserver ****
+make all 
+Building file: ../src/Httpserver.cpp
+Invoking: Cross G++ Compiler
+g++g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Httpserver.d" -MT"src/Httpserver.o" -o "src/Httpserver.o" "../src/Httpserver.cpp"
+/bin/sh: 1: g++g++: not found
+make: *** [src/subdir.mk:20: src/Httpserver.o] Error 127
+"make all" terminated with exit code 2. Build might be incomplete.
+11:49:09 **** Incremental Build of configuration Debug for project Httpserver ****
+make all 
+Building file: ../src/Httpserver.cpp
+Invoking: Cross G++ Compiler
+g++g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Httpserver.d" -MT"src/Httpserver.o" -o "src/Httpserver.o" "../src/Httpserver.cpp"
+/bin/sh: 1: g++g++: not found
+make: *** [src/subdir.mk:20: src/Httpserver.o] Error 127
+"make all" terminated with exit code 2. Build might be incomplete.
+11:57:41 **** Incremental Build of configuration Debug for project Httpserver ****
+make all 
+Building file: ../src/Httpserver.cpp
+Invoking: Cross G++ Compiler
+g++g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Httpserver.d" -MT"src/Httpserver.o" -o "src/Httpserver.o" "../src/Httpserver.cpp"
+/bin/sh: 1: g++g++: not found
+make: *** [src/subdir.mk:20: src/Httpserver.o] Error 127
+"make all" terminated with exit code 2. Build might be incomplete.
+11:57:47 **** Incremental Build of configuration Debug for project Test1 ****
+make all 
+Building file: ../src/Test1.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Test1.d" -MT"src/Test1.o" -o "src/Test1.o" "../src/Test1.cpp"
+../src/Test1.cpp:100:2: warning: "/*" within comment [-Wcomment]
+  100 |  /*int dim = 5;
+      |   
+Finished building: ../src/Test1.cpp
+ 
+Building target: Test1
+Invoking: GCC C++ Linker
+g++  -o "Test1"  ./src/Test1.o ./src/carrello.o   
+/usr/bin/ld: ./src/Test1.o: in function `boost::asio::detail::posix_thread::~posix_thread()':
+/usr/include/boost/asio/detail/impl/posix_thread.ipp:35: undefined reference to `pthread_detach'
+/usr/bin/ld: ./src/Test1.o: in function `boost::asio::detail::posix_thread::join()':
+/usr/include/boost/asio/detail/impl/posix_thread.ipp:42: undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make: *** [makefile:67: Test1] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+12:11:47 **** Incremental Build of configuration Debug for project Test1 ****
+make all 
+Building file: ../src/Test1.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Test1.d" -MT"src/Test1.o" -o "src/Test1.o" "../src/Test1.cpp"
+../src/Test1.cpp: In function ‘void stampa(std::vector<float>)’:
+../src/Test1.cpp:25:19: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<float>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+   25 |  for(int i = 0; i < vettore.size(); i++)
+      |                 ~~^~~~~~~~~~~~~~~~
+../src/Test1.cpp: In function ‘int main()’:
+../src/Test1.cpp:57:6: warning: unused variable ‘numeri’ [-Wunused-variable]
+   57 |  int numeri[MAX] = {0, 5, 10, 15, 20}; // inizializzazione array con valori
+      |      ^~~~~~
+Finished building: ../src/Test1.cpp
+ 
+Building target: Test1
+Invoking: GCC C++ Linker
+g++  -o "Test1"  ./src/Test1.o ./src/carrello.o   
+Finished building target: Test1
+ 
+12:12:10 **** Incremental Build of configuration Debug for project Httpserver ****
+make all 
+Building file: ../src/Httpserver.cpp
+Invoking: Cross G++ Compiler
+g++g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Httpserver.d" -MT"src/Httpserver.o" -o "src/Httpserver.o" "../src/Httpserver.cpp"
+/bin/sh: 1: g++g++: not found
+make: *** [src/subdir.mk:20: src/Httpserver.o] Error 127
+"make all" terminated with exit code 2. Build might be incomplete.
+14:11:20 **** Incremental Build of configuration Debug for project Test1 ****
+make all 
+make: Nothing to be done for 'all'.
+14:11:23 **** Incremental Build of configuration Debug for project Test1 ****
+make all 
+make: Nothing to be done for 'all'.
+14:16:48 **** Incremental Build of configuration Debug for project Test1 ****
+make all 
+make: Nothing to be done for 'all'.
+14:17:29 **** Incremental Build of configuration Debug for project Test1 ****
+make all 
+make: Nothing to be done for 'all'.
+14:17:39 **** Build of configuration Debug for project HttpServer ****
+make all 
+Building file: ../src/Test1.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Test1.d" -MT"src/Test1.o" -o "src/Test1.o" "../src/Test1.cpp"
+Finished building: ../src/Test1.cpp
+ 
+Building target: HttpServer
+Invoking: GCC C++ Linker
+g++  -o "HttpServer"  ./src/Test1.o ./src/carrello.o   
+/usr/bin/ld: ./src/Test1.o: in function `boost::asio::detail::posix_thread::~posix_thread()':
+/usr/include/boost/asio/detail/impl/posix_thread.ipp:35: undefined reference to `pthread_detach'
+/usr/bin/ld: ./src/Test1.o: in function `boost::asio::detail::posix_thread::join()':
+/usr/include/boost/asio/detail/impl/posix_thread.ipp:42: undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make: *** [makefile:67: HttpServer] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+14:18:07 **** Incremental Build of configuration Debug for project HttpServer ****
+make all 
+Building target: HttpServer
+Invoking: GCC C++ Linker
+g++  -o "HttpServer"  ./src/Test1.o ./src/carrello.o   
+/usr/bin/ld: ./src/Test1.o: in function `boost::asio::detail::posix_thread::~posix_thread()':
+/usr/include/boost/asio/detail/impl/posix_thread.ipp:35: undefined reference to `pthread_detach'
+/usr/bin/ld: ./src/Test1.o: in function `boost::asio::detail::posix_thread::join()':
+/usr/include/boost/asio/detail/impl/posix_thread.ipp:42: undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make: *** [makefile:67: HttpServer] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+14:21:40 **** Incremental Build of configuration Debug for project HttpServer ****
+make all 
+Building file: ../src/Test1.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Test1.d" -MT"src/Test1.o" -o "src/Test1.o" "../src/Test1.cpp"
+../src/Test1.cpp:2:10: fatal error: cpthread: No such file or directory
+    2 | #include <cpthread>
+      |          ^~~~~~~~~~
+compilation terminated.
+make: *** [src/subdir.mk:23: src/Test1.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+14:22:07 **** Incremental Build of configuration Debug for project HttpServer ****
+make all 
+Building file: ../src/Test1.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Test1.d" -MT"src/Test1.o" -o "src/Test1.o" "../src/Test1.cpp"
+Finished building: ../src/Test1.cpp
+ 
+Building target: HttpServer
+Invoking: GCC C++ Linker
+g++  -o "HttpServer"  ./src/Test1.o ./src/carrello.o   
+/usr/bin/ld: ./src/Test1.o: in function `boost::asio::detail::posix_thread::~posix_thread()':
+/usr/include/boost/asio/detail/impl/posix_thread.ipp:35: undefined reference to `pthread_detach'
+/usr/bin/ld: ./src/Test1.o: in function `boost::asio::detail::posix_thread::join()':
+/usr/include/boost/asio/detail/impl/posix_thread.ipp:42: undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make: *** [makefile:67: HttpServer] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+14:25:44 **** Incremental Build of configuration Debug for project HttpServer ****
+make all 
+Building file: ../src/Test1.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Test1.d" -MT"src/Test1.o" -o "src/Test1.o" "../src/Test1.cpp"
+Finished building: ../src/Test1.cpp
+ 
+Building target: HttpServer
+Invoking: GCC C++ Linker
+g++  -o "HttpServer"  ./src/Test1.o ./src/carrello.o   
+Finished building target: HttpServer
+ 
+14:25:57 **** Incremental Build of configuration Debug for project HttpServer ****
+make all 
+make: Nothing to be done for 'all'.
+14:31:59 **** Incremental Build of configuration Debug for project HttpServer ****
+make all 
+Building file: ../src/Test1.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Test1.d" -MT"src/Test1.o" -o "src/Test1.o" "../src/Test1.cpp"
+Finished building: ../src/Test1.cpp
+ 
+Building target: HttpServer
+Invoking: GCC C++ Linker
+g++  -o "HttpServer"  ./src/Test1.o ./src/carrello.o   
+Finished building target: HttpServer
+ 
+14:32:58 **** Incremental Build of configuration Debug for project HttpServer ****
+make all 
+Building file: ../src/Test1.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Test1.d" -MT"src/Test1.o" -o "src/Test1.o" "../src/Test1.cpp"
+Finished building: ../src/Test1.cpp
+ 
+Building target: HttpServer
+Invoking: GCC C++ Linker
+g++  -o "HttpServer"  ./src/Test1.o ./src/carrello.o   
+Finished building target: HttpServer
+ 
+14:33:23 **** Incremental Build of configuration Debug for project HttpServer ****
+make all 
+make: Nothing to be done for 'all'.
+14:37:28 **** Incremental Build of configuration Debug for project HttpServer ****
+make all 
+Building file: ../src/Test1.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Test1.d" -MT"src/Test1.o" -o "src/Test1.o" "../src/Test1.cpp"
+Finished building: ../src/Test1.cpp
+ 
+Building target: HttpServer
+Invoking: GCC C++ Linker
+g++  -o "HttpServer"  ./src/Test1.o ./src/carrello.o   
+Finished building target: HttpServer
+ 
+14:37:59 **** Incremental Build of configuration Debug for project HttpServer ****
+make all 
+Building file: ../src/Test1.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Test1.d" -MT"src/Test1.o" -o "src/Test1.o" "../src/Test1.cpp"
+Finished building: ../src/Test1.cpp
+ 
+Building target: HttpServer
+Invoking: GCC C++ Linker
+g++  -o "HttpServer"  ./src/Test1.o ./src/carrello.o   
+Finished building target: HttpServer
+ 
+14:39:15 **** Incremental Build of configuration Debug for project HttpServer ****
+make all 
+make: Nothing to be done for 'all'.
+14:40:42 **** Incremental Build of configuration Debug for project HttpServer ****
+make all 
+Building file: ../src/Test1.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Test1.d" -MT"src/Test1.o" -o "src/Test1.o" "../src/Test1.cpp"
+Finished building: ../src/Test1.cpp
+ 
+Building target: HttpServer
+Invoking: GCC C++ Linker
+g++  -o "HttpServer"  ./src/Test1.o ./src/carrello.o   
+Finished building target: HttpServer
+ 
+14:43:40 **** Incremental Build of configuration Debug for project HttpServer ****
+make all 
+make: Nothing to be done for 'all'.
+14:47:21 **** Incremental Build of configuration Debug for project HttpServer ****
+make all 
+make: Nothing to be done for 'all'.
+14:47:48 **** Incremental Build of configuration Debug for project HttpServer ****
+make all 
+make: Nothing to be done for 'all'.
