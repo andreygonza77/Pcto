@@ -11,7 +11,7 @@ import javax.swing.*;
 import java.net.http.*;
 
 public class Gui extends JFrame {
-    private JTextField link;
+    private JTextField link, infoPost;
     private final JButton get, post, relay1, relay2, relay3, relay4, relay5, relay6;
     private final JScrollPane areaResponse;
     private final JTextArea response;
@@ -47,12 +47,16 @@ public class Gui extends JFrame {
         relays.setBackground(Color.BLACK);
         
         JPanel input = new JPanel();
-        input.setLayout(new GridLayout(1, 3, 5, 5));
+        input.setLayout(new GridLayout(4, 1, 5, 5));
         JPanel output = new JPanel();
         output.setLayout(new BorderLayout());
        
+        
+        infoPost = new JTextField("Inserire contenuto da inviare");
         JPanel inputPanel = new JPanel(new BorderLayout());
         input.add(link); input.add(get); input.add(post);
+        input.add(infoPost);
+        
        
         output.add(areaResponse, BorderLayout.CENTER);
         output.add(relays, BorderLayout.SOUTH);
@@ -100,7 +104,7 @@ public class Gui extends JFrame {
                 if(ae.getSource() instanceof JButton){
                     JButton b = (JButton)ae.getSource();
                     if(b.getText().equals("POST")){
-                        setData(link.getText());
+                        setData(infoPost.getText());
                     }
                 }
             }
@@ -117,7 +121,7 @@ public class Gui extends JFrame {
     }
    
     public void getData(){
-        String urlString = urlGet;
+        String urlString = link.getText();
         if (urlString.isEmpty() || !isValidUrl(urlString)) {
             setResponse("Errore: inserire un URL valido");
             return;
@@ -144,7 +148,7 @@ public class Gui extends JFrame {
     }    
 
     public void setData(String s){
-        String urlString = urlPost;
+        String urlString = link.getText();
         if (urlString.isEmpty() || !isValidUrl(urlString)) {
             setResponse("Errore: inserire un URL valido");
             return;
@@ -162,7 +166,7 @@ public class Gui extends JFrame {
             System.out.println("Risposta: " + response.body());
             System.out.println("Versione: " + response.version());
            
-            setResponse("Stato codice: " + response.statusCode() + "\nUltimo rele acceso: " + response.body() + "\nVersione: " + response.version());
+            setResponse("Stato codice: " + response.statusCode() + "\nUltimo azione POST: " + response.body() + "\nVersione: " + response.version());
         }
         catch(Exception e){
             e.printStackTrace();

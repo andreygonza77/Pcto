@@ -9,13 +9,13 @@ const int PORT = 8080;
 const int MAX = 1024;
 using namespace std;
 
+
 /*
- * per eliminare i processi:
- * lsof -i :8080 -> restiusce info tra cui PID
- * kill -9 (PID) -> uccide il processo
+ * per eliminare un processo:
+ * lsof -i ;PORT -> restituisce info tra cui PID
+ * kill -9 PID -> uccide il processo
+ *
 */
-
-
 
 void handleRequest(int clientSocket) {
     char buffer[MAX];
@@ -24,19 +24,77 @@ void handleRequest(int clientSocket) {
         cerr << "Errore: La ricezione dei dati non è andata a buon fine" << endl;
         return;
     }
-    buffer[bytesReceived] = '\0';
+    buffer[bytesReceived] = '\0';  // Terminazione stringa
+
+    // Stampa la richiesta per il debug
     cout << "Ricevuto: " << buffer << endl;
 
-    const char *httpResponse =
-        "HTTP/1.1 200 OK\r\n"
-        "Content-Type: text/html\r\n"
-        "Connection: close\r\n"
-        "\r\n"
-        "<html><body><h1>Benvenuto al server HTTP!</h1></body></html>";
+    // Estrai il metodo HTTP (GET, POST, ecc.)
+    char method[10], path[100];
+    sscanf(buffer, "%s %s", method, path); // Leggi il metodo e il percorso
 
-    send(clientSocket, httpResponse, strlen(httpResponse), 0);
+    if (strcmp(method, "GET") == 0) {
+        // Gestione GET (simile a quello che hai già fatto)
+        char* queryParams = strchr(path, '?');
+        if (queryParams) {
+            queryParams++;
+            cout << "Parametri GET: " << queryParams << endl;
+        }
+
+        const char *httpResponse =
+            "HTTP/1.1 200 OK\r\n"
+            "Content-Type: text/html\r\n"
+            "Connection: close\r\n"
+            "\r\n"
+            "<html><body><h1>GET: Benvenuto al server HTTP!</h1></body></html>";
+        send(clientSocket, httpResponse, strlen(httpResponse), 0);
+    } else if (strcmp(method, "POST") == 0) {
+        // Gestione POST
+        // Trova il campo Content-Length per sapere quanti byte ci sono nel corpo della richiesta
+        const char *contentLengthHeader = "Content-Length: ";
+        char *contentLengthPos = strstr(buffer, contentLengthHeader);
+        int contentLength = 0;
+
+        if (contentLengthPos) {
+            contentLength = atoi(contentLengthPos + strlen(contentLengthHeader));
+        }
+
+        if (contentLength > 0) {
+            char postData[contentLength + 1];
+            int bytesReceived = recv(clientSocket, postData, contentLength, 0);
+            if (bytesReceived < 0) {
+                cerr << "Errore nella ricezione dei dati POST" << endl;
+                return;
+            }
+            postData[bytesReceived] = '\0'; // Assicurati che la stringa sia terminata
+            cout << "Dati POST ricevuti: " << postData << endl;
+
+            char nome[50], eta[10];
+            if (sscanf(postData, "nome=%49[^&]&eta=%9s", nome, eta) == 2) {
+                cout << "Nome: " << nome << ", Età: " << eta << endl;
+            }
+        }
+        const char *httpResponse =
+            "HTTP/1.1 200 OK\r\n"
+            "Content-Type: text/html\r\n"
+            "Connection: close\r\n"
+            "\r\n"
+            "POST: Dati ricevuti correttamente!";
+
+        send(clientSocket, httpResponse, strlen(httpResponse), 0);
+    } else {
+        // Metodo non supportato
+        const char *httpResponse =
+            "HTTP/1.1 405 Method Not Allowed\r\n"
+            "Content-Type: text/html\r\n"
+            "Connection: close\r\n"
+            "\r\n"
+            "Errore: Metodo non permesso (codice 405)";
+        send(clientSocket, httpResponse, strlen(httpResponse), 0);
+    }
     close(clientSocket);
 }
+
 
 int main() {
     int serverSocket = socket(AF_INET, SOCK_STREAM, 0);

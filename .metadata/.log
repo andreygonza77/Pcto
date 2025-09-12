@@ -4471,3 +4471,253 @@ java.util.NoSuchElementException: No value present
 
 !ENTRY com.espressif.idf.core 1 0 2025-09-12 15:26:41.726
 !MESSAGE /home/fisitronpassdynamics/Desktop/MEUCCI/Test1/build/project_description.json could not find
+
+!ENTRY org.eclipse.ui 4 4 2025-09-12 15:44:55.339
+!MESSAGE To avoid deadlock while executing Display.syncExec() with argument: org.eclipse.debug.internal.ui.sourcelookup.Prompter$$Lambda/0x00007ff4310f5ac8@20d19192, thread Worker-115: Launching HttpServer will interrupt UI thread.
+!SUBENTRY 1 org.eclipse.ui 4 4 2025-09-12 15:44:55.339
+!MESSAGE Worker-115: Launching HttpServer thread is an instance of Worker or owns an ILock
+!STACK 0
+java.lang.IllegalStateException: Call stack for thread Worker-115: Launching HttpServer
+	at java.management@21.0.8/sun.management.ThreadImpl.dumpThreads0(Native Method)
+	at java.management@21.0.8/sun.management.ThreadImpl.getThreadInfo(ThreadImpl.java:482)
+	at org.eclipse.ui.internal.UILockListener.reportInterruption(UILockListener.java:208)
+	at org.eclipse.ui.internal.UILockListener.interruptUI(UILockListener.java:174)
+	at org.eclipse.ui.internal.PendingSyncExec.waitUntilExecuted(PendingSyncExec.java:92)
+	at org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:142)
+	at org.eclipse.swt.widgets.Display.syncExec(Display.java:5967)
+	at org.eclipse.debug.internal.ui.sourcelookup.Prompter.handleStatus(Prompter.java:81)
+	at org.eclipse.cdt.launch.AbstractCLaunchDelegate2.finalLaunchCheck(AbstractCLaunchDelegate2.java:531)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:763)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:688)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1052)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$1.run(DebugUIPlugin.java:1255)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.ui 4 4 2025-09-12 15:44:55.340
+!MESSAGE UI thread waiting on a job or lock.
+!STACK 0
+java.lang.IllegalStateException: Call stack for thread main
+	at org.eclipse.swt.internal.gtk.OS.Call(Native Method)
+	at org.eclipse.swt.widgets.Display.sleep(Display.java:5648)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:824)
+	at org.eclipse.jface.window.Window.open(Window.java:799)
+	at org.eclipse.jface.dialogs.MessageDialog.open(MessageDialog.java:608)
+	at org.eclipse.cdt.launch.internal.ui.BuildErrPrompter.handleStatus(BuildErrPrompter.java:130)
+	at org.eclipse.debug.internal.ui.sourcelookup.Prompter.lambda$0(Prompter.java:73)
+	at org.eclipse.debug.internal.ui.sourcelookup.Prompter$$Lambda/0x00007ff4310f5ac8.run(Unknown Source)
+	at org.eclipse.ui.internal.PendingSyncExec.run(PendingSyncExec.java:68)
+	at org.eclipse.ui.internal.UILockListener.doPendingWork(UILockListener.java:166)
+	at org.eclipse.ui.internal.UILockListener.aboutToWait(UILockListener.java:134)
+	at org.eclipse.core.internal.jobs.LockManager.aboutToWait(LockManager.java:105)
+	at org.eclipse.core.internal.jobs.OrderedLock.doAcquire(OrderedLock.java:173)
+	at org.eclipse.core.internal.jobs.OrderedLock.acquire(OrderedLock.java:125)
+	at org.eclipse.core.internal.jobs.OrderedLock.acquire(OrderedLock.java:100)
+	at org.eclipse.core.internal.jobs.OrderedLock.acquire(OrderedLock.java:87)
+	at org.eclipse.core.internal.resources.WorkManager.checkIn(WorkManager.java:125)
+	at org.eclipse.core.internal.resources.Workspace.prepareOperation(Workspace.java:2407)
+	at org.eclipse.core.internal.resources.Marker.setAttribute(Marker.java:265)
+	at org.eclipse.cdt.codan.internal.core.model.CodanProblemMarker.setProblemArguments(CodanProblemMarker.java:248)
+	at org.eclipse.cdt.codan.internal.ui.CodanProblemMarkerResolutionGenerator$ConditionalResolution.setMarkerArguments(CodanProblemMarkerResolutionGenerator.java:100)
+	at org.eclipse.cdt.codan.internal.ui.CodanProblemMarkerResolutionGenerator.lambda$1(CodanProblemMarkerResolutionGenerator.java:122)
+	at org.eclipse.cdt.codan.internal.ui.CodanProblemMarkerResolutionGenerator$$Lambda/0x00007ff431088000.accept(Unknown Source)
+	at java.base@21.0.8/java.util.stream.ReferencePipeline$15$1.accept(ReferencePipeline.java:540)
+	at java.base@21.0.8/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+	at java.base@21.0.8/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1708)
+	at java.base@21.0.8/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base@21.0.8/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base@21.0.8/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
+	at java.base@21.0.8/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
+	at java.base@21.0.8/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base@21.0.8/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+	at org.eclipse.cdt.codan.internal.ui.CodanProblemMarkerResolutionGenerator.getResolutions(CodanProblemMarkerResolutionGenerator.java:123)
+	at org.eclipse.ui.internal.ide.registry.MarkerHelpRegistry.hasResolution(MarkerHelpRegistry.java:267)
+	at org.eclipse.ui.internal.ide.registry.MarkerHelpRegistry.hasResolutions(MarkerHelpRegistry.java:236)
+	at org.eclipse.cdt.internal.ui.text.correction.CCorrectionProcessor.hasCorrections(CCorrectionProcessor.java:136)
+	at org.eclipse.cdt.internal.ui.text.correction.CCorrectionProcessor.hasCorrections(CCorrectionProcessor.java:126)
+	at org.eclipse.cdt.internal.ui.text.correction.CCorrectionProcessor.canFix(CCorrectionProcessor.java:509)
+	at org.eclipse.jface.text.quickassist.QuickAssistAssistant.canFix(QuickAssistAssistant.java:130)
+	at org.eclipse.ui.texteditor.DefaultMarkerAnnotationAccess.hasQuickFix(DefaultMarkerAnnotationAccess.java:435)
+	at org.eclipse.ui.texteditor.DefaultMarkerAnnotationAccess.getImage(DefaultMarkerAnnotationAccess.java:390)
+	at org.eclipse.ui.texteditor.DefaultMarkerAnnotationAccess.paint(DefaultMarkerAnnotationAccess.java:266)
+	at org.eclipse.jface.text.source.AnnotationRulerColumn.doPaint1(AnnotationRulerColumn.java:806)
+	at org.eclipse.jface.text.source.AnnotationRulerColumn.doPaint(AnnotationRulerColumn.java:546)
+	at org.eclipse.jface.text.source.AnnotationRulerColumn.doubleBufferPaint(AnnotationRulerColumn.java:532)
+	at org.eclipse.jface.text.source.AnnotationRulerColumn.lambda$1(AnnotationRulerColumn.java:260)
+	at org.eclipse.jface.text.source.AnnotationRulerColumn$$Lambda/0x00007ff4309db008.paintControl(Unknown Source)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:268)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:91)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:5862)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1656)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1682)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1665)
+	at org.eclipse.swt.widgets.Control.gtk_draw(Control.java:3891)
+	at org.eclipse.swt.widgets.Scrollable.gtk_draw(Scrollable.java:394)
+	at org.eclipse.swt.widgets.Composite.gtk_draw(Composite.java:506)
+	at org.eclipse.swt.widgets.Canvas.gtk_draw(Canvas.java:173)
+	at org.eclipse.swt.widgets.Widget.windowProc(Widget.java:2614)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:6857)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:6169)
+	at org.eclipse.swt.internal.gtk3.GTK3.gtk_main_do_event(Native Method)
+	at org.eclipse.swt.widgets.Display.eventProc(Display.java:1605)
+	at org.eclipse.swt.internal.gtk3.GTK3.gtk_main_iteration_do(Native Method)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:4519)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1042)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:678)
+	at org.eclipse.ui.internal.Workbench$$Lambda/0x00007ff43037e000.run(Unknown Source)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:583)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:173)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:185)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:219)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:149)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:115)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:467)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:298)
+	at java.base@21.0.8/java.lang.invoke.DirectMethodHandle$Holder.invokeStatic(DirectMethodHandle$Holder)
+	at java.base@21.0.8/java.lang.invoke.LambdaForm$MH/0x00007ff430015800.invoke(LambdaForm$MH)
+	at java.base@21.0.8/java.lang.invoke.LambdaForm$MH/0x00007ff430015c00.invokeExact_MT(LambdaForm$MH)
+	at java.base@21.0.8/jdk.internal.reflect.DirectMethodHandleAccessor.invokeImpl(DirectMethodHandleAccessor.java:155)
+	at java.base@21.0.8/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base@21.0.8/java.lang.reflect.Method.invoke(Method.java:580)
+	at app//org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:627)
+	at app//org.eclipse.equinox.launcher.Main.basicRun(Main.java:575)
+	at app//org.eclipse.equinox.launcher.Main.run(Main.java:1431)
+	at app//org.eclipse.equinox.launcher.Main.main(Main.java:1403)
+
+!ENTRY com.espressif.idf.core 1 0 2025-09-12 15:45:07.687
+!MESSAGE Resolving for variable: BUILD_DIR
+
+!ENTRY com.espressif.idf.core 1 0 2025-09-12 15:45:07.699
+!MESSAGE esp-config.json not found at: /esp-config.json
+
+!ENTRY com.espressif.idf.core 1 0 2025-09-12 15:45:07.699
+!MESSAGE esp-config.json not found at: /esp-config.json
+
+!ENTRY com.espressif.idf.core 1 0 2025-09-12 15:45:07.700
+!MESSAGE /home/fisitronpassdynamics/Desktop/MEUCCI/Test1/build/project_description.json could not find
+
+!ENTRY com.espressif.idf.core 1 0 2025-09-12 15:45:14.842
+!MESSAGE Resolving for variable: BUILD_DIR
+
+!ENTRY com.espressif.idf.core 1 0 2025-09-12 15:45:14.844
+!MESSAGE esp-config.json not found at: /esp-config.json
+
+!ENTRY com.espressif.idf.core 1 0 2025-09-12 15:45:14.845
+!MESSAGE esp-config.json not found at: /esp-config.json
+
+!ENTRY com.espressif.idf.core 1 0 2025-09-12 15:45:14.846
+!MESSAGE /home/fisitronpassdynamics/Desktop/MEUCCI/Test1/build/project_description.json could not find
+
+!ENTRY com.espressif.idf.core 1 0 2025-09-12 15:56:32.543
+!MESSAGE Resolving for variable: BUILD_DIR
+
+!ENTRY com.espressif.idf.core 1 0 2025-09-12 15:56:32.545
+!MESSAGE esp-config.json not found at: /esp-config.json
+
+!ENTRY com.espressif.idf.core 1 0 2025-09-12 15:56:32.545
+!MESSAGE esp-config.json not found at: /esp-config.json
+
+!ENTRY com.espressif.idf.core 1 0 2025-09-12 15:56:32.547
+!MESSAGE /home/fisitronpassdynamics/Desktop/MEUCCI/Test1/build/project_description.json could not find
+
+!ENTRY com.espressif.idf.core 1 0 2025-09-12 15:56:52.026
+!MESSAGE Resolving for variable: BUILD_DIR
+
+!ENTRY com.espressif.idf.core 1 0 2025-09-12 15:56:52.029
+!MESSAGE esp-config.json not found at: /esp-config.json
+
+!ENTRY com.espressif.idf.core 1 0 2025-09-12 15:56:52.031
+!MESSAGE esp-config.json not found at: /esp-config.json
+
+!ENTRY com.espressif.idf.core 1 0 2025-09-12 15:56:52.034
+!MESSAGE /home/fisitronpassdynamics/Desktop/MEUCCI/Test1/build/project_description.json could not find
+!SESSION 2025-09-12 16:10:14.815 -----------------------------------------------
+eclipse.buildId=4.36.0.20250605-1300
+java.version=21.0.8
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.cpp.product
+
+!ENTRY org.eclipse.core.resources 2 10035 2025-09-12 16:10:25.995
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.launchbar.core 2 0 2025-09-12 16:10:36.539
+!MESSAGE Enablement expression is missing for descriptor type com.espressif.idf.debug.gdbjtag.openocd.descriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2025-09-12 16:10:36.540
+!MESSAGE Enablement expression is missing for config provider for com.espressif.idf.debug.gdbjtag.openocd.descriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2025-09-12 16:10:36.553
+!MESSAGE Enablement expression is missing for config provider for com.espressif.idf.launch.serial.core.idf.descriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2025-09-12 16:10:36.553
+!MESSAGE Enablement expression is missing for descriptor type com.espressif.idf.launch.serial.core.idf.descriptorType
+
+!ENTRY com.espressif.idf.core 1 0 2025-09-12 16:10:36.833
+!MESSAGE Eclipse Install location::file:/home/fisitronpassdynamics/eclipse/cpp-2025-06/eclipse/
+
+!ENTRY com.espressif.idf.core 1 0 2025-09-12 16:10:36.834
+!MESSAGE esp-idf.json file doesnt exist at this location: /home/fisitronpassdynamics/eclipse/cpp-2025-06/eclipse/
+
+!ENTRY com.espressif.idf.core 1 0 2025-09-12 16:10:41.527
+!MESSAGE Initializing toolchain...
+
+!ENTRY com.espressif.idf.core 1 0 2025-09-12 16:10:41.529
+!MESSAGE idf_tools.py path: null/tools/idf_tools.py
+
+!ENTRY com.espressif.idf.core 1 0 2025-09-12 16:10:41.530
+!MESSAGE idf_tools.py path doesn't exist
+
+!ENTRY com.espressif.idf.core 1 0 2025-09-12 16:10:41.533
+!MESSAGE [/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin]
+
+!ENTRY com.espressif.idf.core 1 0 2025-09-12 16:11:10.118
+!MESSAGE Resolving for variable: BUILD_DIR
+
+!ENTRY com.espressif.idf.core 1 0 2025-09-12 16:11:10.190
+!MESSAGE esp-config.json not found at: /esp-config.json
+
+!ENTRY com.espressif.idf.core 1 0 2025-09-12 16:11:10.191
+!MESSAGE esp-config.json not found at: /esp-config.json
+
+!ENTRY com.espressif.idf.core 1 0 2025-09-12 16:11:10.210
+!MESSAGE /home/fisitronpassdynamics/Desktop/MEUCCI/Test1/build/project_description.json could not find
+
+!ENTRY com.espressif.idf.core 1 0 2025-09-12 16:25:23.835
+!MESSAGE Resolving for variable: BUILD_DIR
+
+!ENTRY com.espressif.idf.core 1 0 2025-09-12 16:25:23.846
+!MESSAGE esp-config.json not found at: /esp-config.json
+
+!ENTRY com.espressif.idf.core 1 0 2025-09-12 16:25:23.847
+!MESSAGE esp-config.json not found at: /esp-config.json
+
+!ENTRY com.espressif.idf.core 1 0 2025-09-12 16:25:23.851
+!MESSAGE /home/fisitronpassdynamics/Desktop/MEUCCI/Test1/build/project_description.json could not find
+
+!ENTRY com.espressif.idf.core 1 0 2025-09-12 16:29:27.947
+!MESSAGE Resolving for variable: BUILD_DIR
+
+!ENTRY com.espressif.idf.core 1 0 2025-09-12 16:29:27.950
+!MESSAGE esp-config.json not found at: /esp-config.json
+
+!ENTRY com.espressif.idf.core 1 0 2025-09-12 16:29:27.951
+!MESSAGE esp-config.json not found at: /esp-config.json
+
+!ENTRY com.espressif.idf.core 1 0 2025-09-12 16:29:27.963
+!MESSAGE /home/fisitronpassdynamics/Desktop/MEUCCI/Test1/build/project_description.json could not find
+
+!ENTRY com.espressif.idf.core 1 0 2025-09-12 16:32:39.357
+!MESSAGE Resolving for variable: BUILD_DIR
+
+!ENTRY com.espressif.idf.core 1 0 2025-09-12 16:32:39.359
+!MESSAGE esp-config.json not found at: /esp-config.json
+
+!ENTRY com.espressif.idf.core 1 0 2025-09-12 16:32:39.359
+!MESSAGE esp-config.json not found at: /esp-config.json
+
+!ENTRY com.espressif.idf.core 1 0 2025-09-12 16:32:39.360
+!MESSAGE /home/fisitronpassdynamics/Desktop/MEUCCI/Test1/build/project_description.json could not find

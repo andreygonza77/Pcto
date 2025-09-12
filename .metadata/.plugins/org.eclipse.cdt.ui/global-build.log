@@ -1556,3 +1556,129 @@ Finished building target: HttpServer
 15:26:41 **** Incremental Build of configuration Debug for project HttpServer ****
 make all 
 make: Nothing to be done for 'all'.
+15:44:54 **** Incremental Build of configuration Debug for project HttpServer ****
+make all 
+Building file: ../src/Test1.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Test1.d" -MT"src/Test1.o" -o "src/Test1.o" "../src/Test1.cpp"
+../src/Test1.cpp: In function ‘void handleRequest(int)’:
+../src/Test1.cpp:2:17: error: ‘MAX’ was not declared in this scope
+    2 |     char buffer[MAX];
+      |                 ^~~
+../src/Test1.cpp:3:44: error: ‘buffer’ was not declared in this scope
+    3 |     int bytesReceived = recv(clientSocket, buffer, sizeof(buffer) - 1, 0);
+      |                                            ^~~~~~
+../src/Test1.cpp:3:25: error: ‘recv’ was not declared in this scope
+    3 |     int bytesReceived = recv(clientSocket, buffer, sizeof(buffer) - 1, 0);
+      |                         ^~~~
+../src/Test1.cpp:5:9: error: ‘cerr’ was not declared in this scope
+    5 |         cerr << "Errore: La ricezione dei dati non è andata a buon fine" << endl;
+      |         ^~~~
+../src/Test1.cpp:5:78: error: ‘endl’ was not declared in this scope
+    5 |         cerr << "Errore: La ricezione dei dati non è andata a buon fine" << endl;
+      |                                                                              ^~~~
+../src/Test1.cpp:9:5: error: ‘cout’ was not declared in this scope
+    9 |     cout << "Ricevuto: " << buffer << endl;
+      |     ^~~~
+../src/Test1.cpp:9:39: error: ‘endl’ was not declared in this scope
+    9 |     cout << "Ricevuto: " << buffer << endl;
+      |                                       ^~~~
+../src/Test1.cpp:13:5: error: ‘sscanf’ was not declared in this scope
+   13 |     sscanf(buffer, "%s %s", method, path); // Leggi il metodo e il percorso
+      |     ^~~~~~
+../src/Test1.cpp:15:9: error: ‘strcmp’ was not declared in this scope
+   15 |     if (strcmp(method, "GET") == 0) {
+      |         ^~~~~~
+../src/Test1.cpp:1:1: note: ‘strcmp’ is defined in header ‘<cstring>’; did you forget to ‘#include <cstring>’?
+  +++ |+#include <cstring>
+    1 | void handleRequest(int clientSocket) {
+../src/Test1.cpp:17:29: error: ‘strchr’ was not declared in this scope
+   17 |         char* queryParams = strchr(path, '?');  // Trova il carattere "?" che separa i parametri
+      |                             ^~~~~~
+../src/Test1.cpp:17:29: note: ‘strchr’ is defined in header ‘<cstring>’; did you forget to ‘#include <cstring>’?
+../src/Test1.cpp:29:42: error: ‘strlen’ was not declared in this scope
+   29 |         send(clientSocket, httpResponse, strlen(httpResponse), 0);
+      |                                          ^~~~~~
+../src/Test1.cpp:29:42: note: ‘strlen’ is defined in header ‘<cstring>’; did you forget to ‘#include <cstring>’?
+../src/Test1.cpp:29:9: error: ‘send’ was not declared in this scope
+   29 |         send(clientSocket, httpResponse, strlen(httpResponse), 0);
+      |         ^~~~
+../src/Test1.cpp:43:42: error: ‘strlen’ was not declared in this scope
+   43 |         send(clientSocket, httpResponse, strlen(httpResponse), 0);
+      |                                          ^~~~~~
+../src/Test1.cpp:43:42: note: ‘strlen’ is defined in header ‘<cstring>’; did you forget to ‘#include <cstring>’?
+../src/Test1.cpp:43:9: error: ‘send’ was not declared in this scope
+   43 |         send(clientSocket, httpResponse, strlen(httpResponse), 0);
+      |         ^~~~
+../src/Test1.cpp:52:42: error: ‘strlen’ was not declared in this scope
+   52 |         send(clientSocket, httpResponse, strlen(httpResponse), 0);
+      |                                          ^~~~~~
+../src/Test1.cpp:52:42: note: ‘strlen’ is defined in header ‘<cstring>’; did you forget to ‘#include <cstring>’?
+../src/Test1.cpp:52:9: error: ‘send’ was not declared in this scope
+   52 |         send(clientSocket, httpResponse, strlen(httpResponse), 0);
+      |         ^~~~
+../src/Test1.cpp:55:5: error: ‘close’ was not declared in this scope
+   55 |     close(clientSocket);  // Chiudi la connessione con il client
+      |     ^~~~~
+make: *** [src/subdir.mk:23: src/Test1.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+15:45:06 **** Incremental Build of configuration Debug for project HttpServer ****
+make all 
+Building file: ../src/Test1.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Test1.d" -MT"src/Test1.o" -o "src/Test1.o" "../src/Test1.cpp"
+Finished building: ../src/Test1.cpp
+ 
+Building target: HttpServer
+Invoking: GCC C++ Linker
+g++  -o "HttpServer"  ./src/Test1.o ./src/carrello.o   
+Finished building target: HttpServer
+ 
+15:45:14 **** Incremental Build of configuration Debug for project HttpServer ****
+make all 
+make: Nothing to be done for 'all'.
+15:56:31 **** Incremental Build of configuration Debug for project HttpServer ****
+make all 
+Building file: ../src/Test1.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Test1.d" -MT"src/Test1.o" -o "src/Test1.o" "../src/Test1.cpp"
+Finished building: ../src/Test1.cpp
+ 
+Building target: HttpServer
+Invoking: GCC C++ Linker
+g++  -o "HttpServer"  ./src/Test1.o ./src/carrello.o   
+Finished building target: HttpServer
+ 
+15:56:51 **** Incremental Build of configuration Debug for project HttpServer ****
+make all 
+make: Nothing to be done for 'all'.
+16:11:09 **** Build of configuration Debug for project HttpServer ****
+make all 
+make: Nothing to be done for 'all'.
+16:25:23 **** Incremental Build of configuration Debug for project HttpServer ****
+make all 
+make: Nothing to be done for 'all'.
+16:29:26 **** Incremental Build of configuration Debug for project HttpServer ****
+make all 
+Building file: ../src/Test1.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Test1.d" -MT"src/Test1.o" -o "src/Test1.o" "../src/Test1.cpp"
+Finished building: ../src/Test1.cpp
+ 
+Building target: HttpServer
+Invoking: GCC C++ Linker
+g++  -o "HttpServer"  ./src/Test1.o ./src/carrello.o   
+Finished building target: HttpServer
+ 
+16:32:38 **** Incremental Build of configuration Debug for project HttpServer ****
+make all 
+Building file: ../src/Test1.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Test1.d" -MT"src/Test1.o" -o "src/Test1.o" "../src/Test1.cpp"
+Finished building: ../src/Test1.cpp
+ 
+Building target: HttpServer
+Invoking: GCC C++ Linker
+g++  -o "HttpServer"  ./src/Test1.o ./src/carrello.o   
+Finished building target: HttpServer
+ 
