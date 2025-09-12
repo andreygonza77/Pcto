@@ -4387,3 +4387,87 @@ java.util.NoSuchElementException: No value present
 
 !ENTRY com.espressif.idf.core 1 0 2025-09-12 14:47:48.627
 !MESSAGE /home/fisitronpassdynamics/Desktop/MEUCCI/Test1/build/project_description.json could not find
+
+!ENTRY com.espressif.idf.core 1 0 2025-09-12 14:51:38.465
+!MESSAGE Resolving for variable: BUILD_DIR
+
+!ENTRY com.espressif.idf.core 1 0 2025-09-12 14:51:38.466
+!MESSAGE esp-config.json not found at: /esp-config.json
+
+!ENTRY com.espressif.idf.core 1 0 2025-09-12 14:51:38.467
+!MESSAGE esp-config.json not found at: /esp-config.json
+
+!ENTRY com.espressif.idf.core 1 0 2025-09-12 14:51:38.467
+!MESSAGE /home/fisitronpassdynamics/Desktop/MEUCCI/Test1/build/project_description.json could not find
+
+!ENTRY com.espressif.idf.core 1 0 2025-09-12 15:05:55.348
+!MESSAGE Resolving for variable: BUILD_DIR
+
+!ENTRY com.espressif.idf.core 1 0 2025-09-12 15:05:55.367
+!MESSAGE esp-config.json not found at: /esp-config.json
+
+!ENTRY com.espressif.idf.core 1 0 2025-09-12 15:05:55.368
+!MESSAGE esp-config.json not found at: /esp-config.json
+
+!ENTRY com.espressif.idf.core 1 0 2025-09-12 15:05:55.374
+!MESSAGE /home/fisitronpassdynamics/Desktop/MEUCCI/Test1/build/project_description.json could not find
+
+!ENTRY com.espressif.idf.core 1 0 2025-09-12 15:08:12.307
+!MESSAGE Resolving for variable: BUILD_DIR
+
+!ENTRY com.espressif.idf.core 1 0 2025-09-12 15:08:12.309
+!MESSAGE esp-config.json not found at: /esp-config.json
+
+!ENTRY com.espressif.idf.core 1 0 2025-09-12 15:08:12.309
+!MESSAGE esp-config.json not found at: /esp-config.json
+
+!ENTRY com.espressif.idf.core 1 0 2025-09-12 15:08:12.310
+!MESSAGE /home/fisitronpassdynamics/Desktop/MEUCCI/Test1/build/project_description.json could not find
+
+!ENTRY com.espressif.idf.core 1 0 2025-09-12 15:24:02.723
+!MESSAGE Resolving for variable: BUILD_DIR
+
+!ENTRY com.espressif.idf.core 1 0 2025-09-12 15:24:02.725
+!MESSAGE esp-config.json not found at: /esp-config.json
+
+!ENTRY com.espressif.idf.core 1 0 2025-09-12 15:24:02.726
+!MESSAGE esp-config.json not found at: /esp-config.json
+
+!ENTRY com.espressif.idf.core 1 0 2025-09-12 15:24:02.727
+!MESSAGE /home/fisitronpassdynamics/Desktop/MEUCCI/Test1/build/project_description.json could not find
+
+!ENTRY com.espressif.idf.core 1 0 2025-09-12 15:24:11.191
+!MESSAGE Resolving for variable: BUILD_DIR
+
+!ENTRY com.espressif.idf.core 1 0 2025-09-12 15:24:11.194
+!MESSAGE esp-config.json not found at: /esp-config.json
+
+!ENTRY com.espressif.idf.core 1 0 2025-09-12 15:24:11.194
+!MESSAGE esp-config.json not found at: /esp-config.json
+
+!ENTRY com.espressif.idf.core 1 0 2025-09-12 15:24:11.206
+!MESSAGE /home/fisitronpassdynamics/Desktop/MEUCCI/Test1/build/project_description.json could not find
+
+!ENTRY com.espressif.idf.core 1 0 2025-09-12 15:24:36.856
+!MESSAGE Resolving for variable: BUILD_DIR
+
+!ENTRY com.espressif.idf.core 1 0 2025-09-12 15:24:36.858
+!MESSAGE esp-config.json not found at: /esp-config.json
+
+!ENTRY com.espressif.idf.core 1 0 2025-09-12 15:24:36.858
+!MESSAGE esp-config.json not found at: /esp-config.json
+
+!ENTRY com.espressif.idf.core 1 0 2025-09-12 15:24:36.860
+!MESSAGE /home/fisitronpassdynamics/Desktop/MEUCCI/Test1/build/project_description.json could not find
+
+!ENTRY com.espressif.idf.core 1 0 2025-09-12 15:26:41.719
+!MESSAGE Resolving for variable: BUILD_DIR
+
+!ENTRY com.espressif.idf.core 1 0 2025-09-12 15:26:41.725
+!MESSAGE esp-config.json not found at: /esp-config.json
+
+!ENTRY com.espressif.idf.core 1 0 2025-09-12 15:26:41.725
+!MESSAGE esp-config.json not found at: /esp-config.json
+
+!ENTRY com.espressif.idf.core 1 0 2025-09-12 15:26:41.726
+!MESSAGE /home/fisitronpassdynamics/Desktop/MEUCCI/Test1/build/project_description.json could not find

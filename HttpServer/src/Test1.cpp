@@ -6,85 +6,77 @@
 #include <arpa/inet.h>
 
 const int PORT = 8080;
+const int MAX = 1024;
+using namespace std;
 
-void handle_request(int client_socket) {
-    // Ricevi la richiesta dal client
-    char buffer[1024];
-    int bytes_received = recv(client_socket, buffer, sizeof(buffer) - 1, 0);
-    if (bytes_received < 0) {
-        std::cerr << "Errore nella ricezione dei dati" << std::endl;
+/*
+ * per eliminare i processi:
+ * lsof -i :8080 -> restiusce info tra cui PID
+ * kill -9 (PID) -> uccide il processo
+*/
+
+
+
+void handleRequest(int clientSocket) {
+    char buffer[MAX];
+    int bytesReceived = recv(clientSocket, buffer, sizeof(buffer) - 1, 0);
+    if (bytesReceived < 0) {
+        cerr << "Errore: La ricezione dei dati non è andata a buon fine" << endl;
         return;
     }
+    buffer[bytesReceived] = '\0';
+    cout << "Ricevuto: " << buffer << endl;
 
-    buffer[bytes_received] = '\0';  // Termina la stringa correttamente
-
-    // Mostra la richiesta ricevuta
-    std::cout << "Ricevuto: " << buffer << std::endl;
-
-    // Prepara la risposta HTTP
-    const char *http_response =
+    const char *httpResponse =
         "HTTP/1.1 200 OK\r\n"
         "Content-Type: text/html\r\n"
         "Connection: close\r\n"
         "\r\n"
         "<html><body><h1>Benvenuto al server HTTP!</h1></body></html>";
 
-    // Invia la risposta al client
-    send(client_socket, http_response, strlen(http_response), 0);
-
-    // Chiudi la connessione con il client
-    close(client_socket);
+    send(clientSocket, httpResponse, strlen(httpResponse), 0);
+    close(clientSocket);
 }
 
 int main() {
-    // Crea un socket per il server
-    int server_socket = socket(AF_INET, SOCK_STREAM, 0);
-    if (server_socket < 0) {
-        std::cerr << "Errore nella creazione del socket" << std::endl;
+    int serverSocket = socket(AF_INET, SOCK_STREAM, 0);
+    if (serverSocket < 0) {
+        cerr << "Errore: Impossibile creare il socket" << endl;
         return 1;
     }
 
-    // Imposta l'opzione SO_REUSEADDR per riutilizzare la porta
     int optval = 1;
-    if (setsockopt(server_socket, SOL_SOCKET, SO_REUSEADDR, &optval, sizeof(optval)) < 0) {
-        std::cerr << "Errore nell'impostare SO_REUSEADDR" << std::endl;
+    if (setsockopt(serverSocket, SOL_SOCKET, SO_REUSEADDR, &optval, sizeof(optval)) < 0) {
+        cerr << "Errore: Impossibile impostare SO_REUSEADDR" << endl;
         return 1;
     }
 
-    // Imposta l'indirizzo del server
-    sockaddr_in server_addr{};
-    server_addr.sin_family = AF_INET;
-    server_addr.sin_addr.s_addr = INADDR_ANY;
-    server_addr.sin_port = htons(PORT);
+    sockaddr_in serverAddr{};
+    serverAddr.sin_family = AF_INET;
+    serverAddr.sin_addr.s_addr = INADDR_ANY;
+    serverAddr.sin_port = htons(PORT);
 
-    // Associa il socket all'indirizzo
-    if (bind(server_socket, (struct sockaddr*)&server_addr, sizeof(server_addr)) < 0) {
-        std::cerr << "Errore nel bind del socket sulla porta " << PORT << std::endl;
+    if (bind(serverSocket, (struct sockaddr*)&serverAddr, sizeof(serverAddr)) < 0) {
+        cerr << "Errore: bind non corretto del socket sulla porta " << PORT << endl;
         return 1;
     }
 
-    // Inizia ad ascoltare le connessioni in ingresso
-    if (listen(server_socket, 10) < 0) {
-        std::cerr << "Errore nell'ascolto delle connessioni" << std::endl;
+    if (listen(serverSocket, 10) < 0) {
+        cerr << "Errore: ascolto non corretto delle connessioni" << endl;
         return 1;
     }
 
-    std::cout << "Server in ascolto sulla porta " << PORT << "..." << std::endl;
+    cout << "Server in ascolto sulla porta " << PORT << "..." << endl;
 
-    // Ciclo principale per accettare le connessioni
     while (true) {
-        // Accetta una connessione in ingresso
-        int client_socket = accept(server_socket, nullptr, nullptr);
-        if (client_socket < 0) {
-            std::cerr << "Errore nell'accettare la connessione" << std::endl;
+        int clientSocket = accept(serverSocket, nullptr, nullptr);
+        if (clientSocket < 0) {
+            cerr << "Errore: Impossibile accettare la connessione" << endl;
             continue;
         }
-
-        // Gestisce la richiesta del client
-        handle_request(client_socket);
+        handleRequest(clientSocket);
     }
 
-    // Chiudi il socket del server
-    close(server_socket);
+    close(serverSocket);
     return 0;
 }
