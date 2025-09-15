@@ -2,6 +2,8 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QLineEdit>
+#include <QCheckBox>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -27,5 +29,7 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
+    QLineEdit *link;
+    QCheckBox *getCheckBox;
 };
 #endif // MAINWINDOW_H
