@@ -15,6 +15,16 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+private slots:
+
+    void on_getBtn_clicked();
+
+    void on_postBtn_clicked();
+
+    void on_linkEdit_returnPressed();
+
+    void on_checkBox_stateChanged(int arg1);
+
 private:
     Ui::MainWindow *ui;
 };

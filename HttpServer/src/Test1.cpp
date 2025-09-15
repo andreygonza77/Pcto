@@ -26,21 +26,15 @@ void handleRequest(int clientSocket) {
     }
     buffer[bytesReceived] = '\0';  // Terminazione stringa
 
-    // Stampa la richiesta per il debug
     cout << "Ricevuto: " << buffer << endl;
-
-    // Estrai il metodo HTTP (GET, POST, ecc.)
     char method[10], path[100];
-    sscanf(buffer, "%s %s", method, path); // Leggi il metodo e il percorso
-
+    sscanf(buffer, "%s %s", method, path);
     if (strcmp(method, "GET") == 0) {
-        // Gestione GET (simile a quello che hai già fatto)
         char* queryParams = strchr(path, '?');
         if (queryParams) {
             queryParams++;
             cout << "Parametri GET: " << queryParams << endl;
         }
-
         const char *httpResponse =
             "HTTP/1.1 200 OK\r\n"
             "Content-Type: text/html\r\n"
@@ -49,8 +43,6 @@ void handleRequest(int clientSocket) {
             "<html><body><h1>GET: Benvenuto al server HTTP!</h1></body></html>";
         send(clientSocket, httpResponse, strlen(httpResponse), 0);
     } else if (strcmp(method, "POST") == 0) {
-        // Gestione POST
-        // Trova il campo Content-Length per sapere quanti byte ci sono nel corpo della richiesta
         const char *contentLengthHeader = "Content-Length: ";
         char *contentLengthPos = strstr(buffer, contentLengthHeader);
         int contentLength = 0;
@@ -66,7 +58,7 @@ void handleRequest(int clientSocket) {
                 cerr << "Errore nella ricezione dei dati POST" << endl;
                 return;
             }
-            postData[bytesReceived] = '\0'; // Assicurati che la stringa sia terminata
+            postData[bytesReceived] = '\0';
             cout << "Dati POST ricevuti: " << postData << endl;
 
             char nome[50], eta[10];
@@ -83,7 +75,6 @@ void handleRequest(int clientSocket) {
 
         send(clientSocket, httpResponse, strlen(httpResponse), 0);
     } else {
-        // Metodo non supportato
         const char *httpResponse =
             "HTTP/1.1 405 Method Not Allowed\r\n"
             "Content-Type: text/html\r\n"
