@@ -1,4 +1,4 @@
-    #include "mainwindow.h"
+#include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include <QDebug>
 #include <QApplication>
@@ -40,15 +40,9 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
     link = ui->linkEdit;
     getCheckBox = ui->checkBox;
-
-
-
-
-
     QTimer *timer = new QTimer(this);
     connect(timer, SIGNAL(timeout()), this, SLOT(MyTimerSlot()));
     timer->start(2000);
-    //connect(ui->getBtn, &QPushButton::clicked, this, &MainWindow::on_getBtn_clicked);
 
 }
 
@@ -58,20 +52,11 @@ void MainWindow::MyTimerSlot()
 {
     if (isRequestInProgress) return;
     isRequestInProgress = true;
-
-    //MyWindow myWindow;
-
-    // Creation of the request.
     curlpp::Easy myRequest;
-
-    //myRequest.setOpt(curlpp::options::Port(8080));
-
     myRequest.setOpt(curlpp::options::Url(urlSelected));
 
     using namespace curlpp::Options;
-    //myRequest.setOpt(Verbose(true));
     using namespace std::placeholders;
-    //myRequest.setOpt(DebugFunction(std::bind(&MyWindow::writeDebug, &myWindow, _1, _2, _3)));
 
     std::ostringstream os;
     curlpp::options::WriteStream ws(&os);
@@ -80,27 +65,14 @@ void MainWindow::MyTimerSlot()
 
     info = os.str();
     updateButtonStyles();
-    //os << myRequest;
     ui->output->setText(QString::fromStdString(info));
     qDebug() << QString::fromStdString(info);
     isRequestInProgress = false;
 }
 
-
-
 MainWindow::~MainWindow()
 {
     delete ui;
-}
-
-void MainWindow::on_getBtn_clicked()
-{
-    qDebug() << "Get BTN";
-}
-
-void MainWindow::on_postBtn_clicked()
-{
-    qDebug() << "Post BTN";
 }
 
 void MainWindow::on_linkEdit_returnPressed()
@@ -127,12 +99,7 @@ void MainWindow::on_linkEdit_returnPressed()
 
 void MainWindow::on_checkBox_stateChanged(int arg1)
 {
-    //    if(arg1 == Qt::Checked){
-    //        qDebug() << "Checkbox selezionato";
-    //    }
-    //    else if(arg1 == Qt::Unchecked) {
-    //        qDebug() << "Checkbox non selezionato";
-    //    }
+    // optional
 }
 string trim(const string& str) {
     int start = 0;
