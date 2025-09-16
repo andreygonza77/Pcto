@@ -5211,3 +5211,64 @@ Caused by: java.lang.NullPointerException: Cannot invoke "org.eclipse.launchbar.
 
 !ENTRY com.espressif.idf.core 1 0 2025-09-15 09:16:35.766
 !MESSAGE /home/fisitronpassdynamics/Desktop/MEUCCI/Test1/build/project_description.json could not find
+!SESSION 2025-09-16 08:59:33.541 -----------------------------------------------
+eclipse.buildId=4.36.0.20250605-1300
+java.version=21.0.8
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.cpp.product
+
+!ENTRY org.eclipse.launchbar.core 2 0 2025-09-16 08:59:49.783
+!MESSAGE Enablement expression is missing for descriptor type com.espressif.idf.debug.gdbjtag.openocd.descriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2025-09-16 08:59:49.794
+!MESSAGE Enablement expression is missing for config provider for com.espressif.idf.debug.gdbjtag.openocd.descriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2025-09-16 08:59:49.794
+!MESSAGE Enablement expression is missing for config provider for com.espressif.idf.launch.serial.core.idf.descriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2025-09-16 08:59:49.795
+!MESSAGE Enablement expression is missing for descriptor type com.espressif.idf.launch.serial.core.idf.descriptorType
+
+!ENTRY com.espressif.idf.core 1 0 2025-09-16 08:59:50.092
+!MESSAGE Eclipse Install location::file:/home/fisitronpassdynamics/eclipse/cpp-2025-06/eclipse/
+
+!ENTRY com.espressif.idf.core 1 0 2025-09-16 08:59:50.092
+!MESSAGE esp-idf.json file doesnt exist at this location: /home/fisitronpassdynamics/eclipse/cpp-2025-06/eclipse/
+
+!ENTRY com.espressif.idf.core 1 0 2025-09-16 08:59:54.021
+!MESSAGE Initializing toolchain...
+
+!ENTRY com.espressif.idf.core 1 0 2025-09-16 08:59:54.022
+!MESSAGE idf_tools.py path: null/tools/idf_tools.py
+
+!ENTRY com.espressif.idf.core 1 0 2025-09-16 08:59:54.022
+!MESSAGE idf_tools.py path doesn't exist
+
+!ENTRY com.espressif.idf.core 1 0 2025-09-16 08:59:54.023
+!MESSAGE [/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin]
+
+!ENTRY com.espressif.idf.core 1 0 2025-09-16 08:59:57.435
+!MESSAGE Resolving for variable: BUILD_DIR
+
+!ENTRY com.espressif.idf.core 1 0 2025-09-16 08:59:57.501
+!MESSAGE esp-config.json not found at: /esp-config.json
+
+!ENTRY com.espressif.idf.core 1 0 2025-09-16 08:59:57.502
+!MESSAGE esp-config.json not found at: /esp-config.json
+
+!ENTRY com.espressif.idf.core 1 0 2025-09-16 08:59:57.514
+!MESSAGE /home/fisitronpassdynamics/Desktop/MEUCCI/Test1/build/project_description.json could not find
+
+!ENTRY com.espressif.idf.core 1 0 2025-09-16 09:38:56.461
+!MESSAGE Resolving for variable: BUILD_DIR
+
+!ENTRY com.espressif.idf.core 1 0 2025-09-16 09:38:56.469
+!MESSAGE esp-config.json not found at: /esp-config.json
+
+!ENTRY com.espressif.idf.core 1 0 2025-09-16 09:38:56.471
+!MESSAGE esp-config.json not found at: /esp-config.json
+
+!ENTRY com.espressif.idf.core 1 0 2025-09-16 09:38:56.474
+!MESSAGE /home/fisitronpassdynamics/Desktop/MEUCCI/Test1/build/project_description.json could not find

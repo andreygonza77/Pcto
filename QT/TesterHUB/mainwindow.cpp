@@ -6,8 +6,10 @@
 #include <QCheckBox>
 #include <string>
 #include <iostream>
-
+#include <sstream>
+#include <QTimer>
 using namespace std;
+const string postLink = "http://10.100.0.77/set_rele";
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -16,7 +18,44 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
     link = ui->linkEdit;
     getCheckBox = ui->checkBox;
-     //connect(ui->getBtn, &QPushButton::clicked, this, &MainWindow::on_getBtn_clicked);
+
+
+
+
+    QTimer *timer = new QTimer(this);
+    connect(timer, SIGNAL(timeout()), this, SLOT(MyTimerSlot()));
+    timer->start(2000);
+    //connect(ui->getBtn, &QPushButton::clicked, this, &MainWindow::on_getBtn_clicked);
+
+}
+
+void MainWindow::MyTimerSlot()
+{
+
+    MyWindow myWindow;
+
+    // Creation of the request.
+    curlpp::Easy myRequest;
+
+    //myRequest.setOpt(curlpp::options::Port(8080));
+
+    myRequest.setOpt(curlpp::options::Url(std::string("http://10.100.0.77/get_rele_status")));
+
+    using namespace curlpp::Options;
+    //myRequest.setOpt(Verbose(true));
+    using namespace std::placeholders;
+    //myRequest.setOpt(DebugFunction(std::bind(&MyWindow::writeDebug, &myWindow, _1, _2, _3)));
+
+    myRequest.perform();
+    std::ostringstream os;
+    curlpp::options::WriteStream ws(&os);
+    myRequest.setOpt(ws);
+    myRequest.perform();
+    string info = os.str();
+    //os << myRequest;
+    qDebug() << QString::fromStdString(info);
+
+
 
 }
 
@@ -58,16 +97,22 @@ void MainWindow::on_linkEdit_returnPressed()
 
 
 
-
     ui->output->setText(outputText);
 }
+
 void MainWindow::on_checkBox_stateChanged(int arg1)
 {
-    if(arg1 == Qt::Checked){
-        qDebug() << "Checkbox selezionato";
-    }
-    else if(arg1 == Qt::Unchecked) {
-        qDebug() << "Checkbox non selezionato";
-    }
+    //    if(arg1 == Qt::Checked){
+    //        qDebug() << "Checkbox selezionato";
+    //    }
+    //    else if(arg1 == Qt::Unchecked) {
+    //        qDebug() << "Checkbox non selezionato";
+    //    }
 }
 
+
+void MainWindow::on_ch6_clicked()
+{
+
+
+}
