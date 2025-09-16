@@ -21,8 +21,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_MainWindow_t {
-    QByteArrayData data[9];
-    char stringdata0[132];
+    QByteArrayData data[17];
+    char stringdata0[233];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -39,13 +39,24 @@ QT_MOC_LITERAL(4, 42, 18), // "on_postBtn_clicked"
 QT_MOC_LITERAL(5, 61, 25), // "on_linkEdit_returnPressed"
 QT_MOC_LITERAL(6, 87, 24), // "on_checkBox_stateChanged"
 QT_MOC_LITERAL(7, 112, 4), // "arg1"
-QT_MOC_LITERAL(8, 117, 14) // "on_ch6_clicked"
+QT_MOC_LITERAL(8, 117, 14), // "on_ch6_clicked"
+QT_MOC_LITERAL(9, 132, 14), // "on_ch5_clicked"
+QT_MOC_LITERAL(10, 147, 14), // "on_ch4_clicked"
+QT_MOC_LITERAL(11, 162, 14), // "on_ch3_clicked"
+QT_MOC_LITERAL(12, 177, 16), // "sendRelayCommand"
+QT_MOC_LITERAL(13, 194, 11), // "statusIndex"
+QT_MOC_LITERAL(14, 206, 11), // "std::string"
+QT_MOC_LITERAL(15, 218, 6), // "dataOn"
+QT_MOC_LITERAL(16, 225, 7) // "dataOff"
 
     },
     "MainWindow\0MyTimerSlot\0\0on_getBtn_clicked\0"
     "on_postBtn_clicked\0on_linkEdit_returnPressed\0"
     "on_checkBox_stateChanged\0arg1\0"
-    "on_ch6_clicked"
+    "on_ch6_clicked\0on_ch5_clicked\0"
+    "on_ch4_clicked\0on_ch3_clicked\0"
+    "sendRelayCommand\0statusIndex\0std::string\0"
+    "dataOn\0dataOff"
 };
 #undef QT_MOC_LITERAL
 
@@ -55,7 +66,7 @@ static const uint qt_meta_data_MainWindow[] = {
        8,       // revision
        0,       // classname
        0,    0, // classinfo
-       6,   14, // methods
+      10,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -63,12 +74,16 @@ static const uint qt_meta_data_MainWindow[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
-       1,    0,   44,    2, 0x08 /* Private */,
-       3,    0,   45,    2, 0x08 /* Private */,
-       4,    0,   46,    2, 0x08 /* Private */,
-       5,    0,   47,    2, 0x08 /* Private */,
-       6,    1,   48,    2, 0x08 /* Private */,
-       8,    0,   51,    2, 0x08 /* Private */,
+       1,    0,   64,    2, 0x08 /* Private */,
+       3,    0,   65,    2, 0x08 /* Private */,
+       4,    0,   66,    2, 0x08 /* Private */,
+       5,    0,   67,    2, 0x08 /* Private */,
+       6,    1,   68,    2, 0x08 /* Private */,
+       8,    0,   71,    2, 0x08 /* Private */,
+       9,    0,   72,    2, 0x08 /* Private */,
+      10,    0,   73,    2, 0x08 /* Private */,
+      11,    0,   74,    2, 0x08 /* Private */,
+      12,    3,   75,    2, 0x08 /* Private */,
 
  // slots: parameters
     QMetaType::Void,
@@ -77,6 +92,10 @@ static const uint qt_meta_data_MainWindow[] = {
     QMetaType::Void,
     QMetaType::Void, QMetaType::Int,    7,
     QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void, QMetaType::Int, 0x80000000 | 14, 0x80000000 | 14,   13,   15,   16,
 
        0        // eod
 };
@@ -93,6 +112,10 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 3: _t->on_linkEdit_returnPressed(); break;
         case 4: _t->on_checkBox_stateChanged((*reinterpret_cast< int(*)>(_a[1]))); break;
         case 5: _t->on_ch6_clicked(); break;
+        case 6: _t->on_ch5_clicked(); break;
+        case 7: _t->on_ch4_clicked(); break;
+        case 8: _t->on_ch3_clicked(); break;
+        case 9: _t->sendRelayCommand((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< std::string(*)>(_a[2])),(*reinterpret_cast< std::string(*)>(_a[3]))); break;
         default: ;
         }
     }
@@ -127,13 +150,13 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 6)
+        if (_id < 10)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 6;
+        _id -= 10;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 6)
+        if (_id < 10)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 6;
+        _id -= 10;
     }
     return _id;
 }

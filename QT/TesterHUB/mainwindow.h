@@ -54,9 +54,18 @@ private slots:
 
     void on_ch6_clicked();
 
+    void on_ch5_clicked();
+
+    void on_ch4_clicked();
+
+    void on_ch3_clicked();
+
+    void sendRelayCommand(int statusIndex, std::string dataOn, std::string dataOff);
+
 private:
     Ui::MainWindow *ui;
     QLineEdit *link;
     QCheckBox *getCheckBox;
+    std::string info;
 };
 #endif // MAINWINDOW_H
