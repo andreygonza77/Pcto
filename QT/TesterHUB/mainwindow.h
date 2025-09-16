@@ -62,10 +62,20 @@ private slots:
 
     void sendRelayCommand(int statusIndex, std::string dataOn, std::string dataOff);
 
+    void on_ch2_clicked();
+
+    void on_ch1_clicked();
+
+    void on_comboBox_activated(const QString &arg1);
+
+    void updateButtonStyles();
+
 private:
     Ui::MainWindow *ui;
     QLineEdit *link;
     QCheckBox *getCheckBox;
     std::string info;
+    std::string urlSelected;
+    std::string postSelected;
 };
 #endif // MAINWINDOW_H

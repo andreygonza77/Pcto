@@ -12,6 +12,7 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QCheckBox>
+#include <QtWidgets/QComboBox>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QMainWindow>
@@ -46,6 +47,7 @@ public:
     QPushButton *ch3;
     QPushButton *ch2;
     QPushButton *ch1;
+    QComboBox *comboBox;
     QMenuBar *menubar;
 
     void setupUi(QMainWindow *MainWindow)
@@ -121,6 +123,14 @@ public:
         ch1->setObjectName(QString::fromUtf8("ch1"));
         ch1->setGeometry(QRect(310, 300, 41, 81));
         ch1->setStyleSheet(QString::fromUtf8("background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:1, stop:0 rgba(0, 0, 0, 255), stop:1 rgba(255, 255, 255, 255));"));
+        comboBox = new QComboBox(centralwidget);
+        comboBox->addItem(QString());
+        comboBox->addItem(QString());
+        comboBox->addItem(QString());
+        comboBox->addItem(QString());
+        comboBox->setObjectName(QString::fromUtf8("comboBox"));
+        comboBox->setGeometry(QRect(10, 170, 291, 25));
+        comboBox->setInsertPolicy(QComboBox::InsertBeforeCurrent);
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
@@ -152,6 +162,11 @@ public:
         ch3->setText(QString());
         ch2->setText(QString());
         ch1->setText(QString());
+        comboBox->setItemText(0, QApplication::translate("MainWindow", "10.100.0.77", nullptr));
+        comboBox->setItemText(1, QApplication::translate("MainWindow", "10.100.0.66", nullptr));
+        comboBox->setItemText(2, QApplication::translate("MainWindow", "10.100.0.88", nullptr));
+        comboBox->setItemText(3, QApplication::translate("MainWindow", "10.100.0.91", nullptr));
+
     } // retranslateUi
 
 };

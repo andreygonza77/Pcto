@@ -1,4 +1,4 @@
-#include "mainwindow.h"
+    #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include <QDebug>
 #include <QApplication>
@@ -9,7 +9,6 @@
 #include <sstream>
 #include <QTimer>
 using namespace std;
-const string postLink = "http://10.100.0.77/set_rele";
 const string rele6On = "RELE[6][1]";
 const string rele6Off = "RELE[6][0]";
 const string rele5On = "RELE[5][1]";
@@ -27,14 +26,21 @@ const int LENGTH = 10;
 
 const string getUrl = "http://10.100.0.77/get_rele_status";
 const string postUrl = "http://10.100.0.77/set_rele";
+const string getUrl66 = "http://10.100.0.66/get_rele_status";
+const string postUrl66 = "http://10.100.0.66/set_rele";
+const string getUrl88 = "http://10.100.0.88/get_rele_status";
+const string postUrl88 = "http://10.100.0.88/set_rele";
+const string getUrl91 = "http://10.100.0.91/get_rele_status"; //HUB2
+const string postUrl91 = "http://10.100.0.91/set_rele"; //HUB2
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
-    , ui(new Ui::MainWindow), info("")
+    , ui(new Ui::MainWindow), info(""), urlSelected(getUrl), postSelected(postUrl)
 {
     ui->setupUi(this);
     link = ui->linkEdit;
     getCheckBox = ui->checkBox;
+
 
 
 
@@ -46,17 +52,21 @@ MainWindow::MainWindow(QWidget *parent)
 
 }
 
+bool isRequestInProgress = false;
+
 void MainWindow::MyTimerSlot()
 {
+    if (isRequestInProgress) return;
+    isRequestInProgress = true;
 
-    MyWindow myWindow;
+    //MyWindow myWindow;
 
     // Creation of the request.
     curlpp::Easy myRequest;
 
     //myRequest.setOpt(curlpp::options::Port(8080));
 
-    myRequest.setOpt(curlpp::options::Url(std::string("http://10.100.0.77/get_rele_status")));
+    myRequest.setOpt(curlpp::options::Url(urlSelected));
 
     using namespace curlpp::Options;
     //myRequest.setOpt(Verbose(true));
@@ -67,9 +77,13 @@ void MainWindow::MyTimerSlot()
     curlpp::options::WriteStream ws(&os);
     myRequest.setOpt(ws);
     myRequest.perform();
+
     info = os.str();
+    updateButtonStyles();
     //os << myRequest;
+    ui->output->setText(QString::fromStdString(info));
     qDebug() << QString::fromStdString(info);
+    isRequestInProgress = false;
 }
 
 
@@ -107,8 +121,6 @@ void MainWindow::on_linkEdit_returnPressed()
     outputText += "URL: " + url + "\n";
     outputText += "Contenuto: " + content + "\n";
     outputText += "Metodo: " + QString(isGetChecked ? "GET" : "POST") + "\n";
-
-
 
     ui->output->setText(outputText);
 }
@@ -158,13 +170,14 @@ bool* getStatus(const std::string& info){
 
 void MainWindow::sendRelayCommand(int statusIndex, string dataOn, string dataOff) { // Post
     string content = info;
+    string url = postSelected;
     bool* x = getStatus(content);
     const string dataToSend = x[statusIndex] ? dataOff : dataOn;
 
     try {
         curlpp::Easy request;
 
-        request.setOpt(new curlpp::options::Url(postUrl));
+        request.setOpt(new curlpp::options::Url(url));
         request.setOpt(new curlpp::options::Verbose(true));
 
         std::list<std::string> header;
@@ -212,4 +225,38 @@ void MainWindow::on_ch2_clicked()
 void MainWindow::on_ch1_clicked()
 {
     sendRelayCommand(0, rele1On, rele1Off);
+}
+
+
+void MainWindow::updateButtonStyles()
+{
+    string content = info;
+    bool* status = getStatus(content);  // Usa info aggiornata dal MyTimerSlot
+
+    QPushButton* buttons[MAX] = {ui->ch1, ui->ch2, ui->ch3, ui->ch4, ui->ch5, ui->ch6};
+
+    for (int i = 0; i < MAX; ++i) {
+        if (status[i]) {
+            buttons[i]->setStyleSheet("background-color: red; color: white;");
+        } else {
+            buttons[i]->setStyleSheet("background-color: black; color: white;");
+        }
+    }
+}
+
+void MainWindow::on_comboBox_activated(const QString &arg1)
+{
+    if (arg1 == "10.100.0.77") {
+        urlSelected = getUrl;
+        postSelected = postUrl;
+    } else if (arg1 == "10.100.0.66") {
+        urlSelected = getUrl66;
+        postSelected = postUrl66;
+    } else if (arg1 == "10.100.0.88") {
+        urlSelected = getUrl88;
+        postSelected = postUrl88;
+    } else if (arg1 == "10.100.0.91") {
+        urlSelected = getUrl91;
+        postSelected = postUrl91;
+    } else qDebug() << "Errore: la scelta non esiste";
 }

@@ -283,6 +283,39 @@
      <string/>
     </property>
    </widget>
+   <widget class="QComboBox" name="comboBox">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>170</y>
+      <width>291</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="insertPolicy">
+     <enum>QComboBox::InsertBeforeCurrent</enum>
+    </property>
+    <item>
+     <property name="text">
+      <string>10.100.0.77</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>10.100.0.66</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>10.100.0.88</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>10.100.0.91</string>
+     </property>
+    </item>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
