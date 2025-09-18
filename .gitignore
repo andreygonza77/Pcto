@@ -1,1 +1,15 @@
 /.metadata/
+/PrimoWebServer/nbproject/private/
+/PrimoWebServer/build/
+/WebServer/nbproject/private/
+/WebServer/build/
+/WebServer/dist/
+/TestWebServerJava/nbproject/private/
+/TestWebServer5/nbproject/private/
+/TestWebServer5/build/
+/TestWebServer5/dist/
+/TestWebServer7/target/
+/TestWebServer8/nbproject/private/
+/TestWebServer9/nbproject/private/
+/TestWebServer10/nbproject/private/
+/TestWebServer10/build/
