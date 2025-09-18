@@ -54,13 +54,22 @@ public class HelloServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
         throws ServletException, IOException {
+        /*
     response.setContentType("text/html");
     PrintWriter out = response.getWriter();
     out.println("<html><body>");
     out.println("<h1>Ciao dal Servlet!</h1>");
+    out.println("</body></html>");*/
+
+
+    response.setContentType("text/html");
+    PrintWriter out = response.getWriter();
+    String content = request.getParameter("link");
+    
+    out.println("<html><body>");
+    out.println("<p> Il contenuto che hai scritto è: " + content + "</p>");
     out.println("</body></html>");
 }
-
     /**
      * Handles the HTTP <code>POST</code> method.
      *
@@ -70,19 +79,17 @@ public class HelloServlet extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        processRequest(request, response);
-    }
-
+protected void doPost(HttpServletRequest request, HttpServletResponse response)
+        throws ServletException, IOException {
     /**
      * Returns a short description of the servlet.
      *
      * @return a String containing servlet description
-     */
+     */}
+
     @Override
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
-
+    
 }

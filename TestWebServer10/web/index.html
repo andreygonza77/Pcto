@@ -1,15 +1,47 @@
-<!DOCTYPE html>
-<!--
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
--->
 <html>
-    <head>
-        <title>TODO supply a title</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <div>TODO write content</div>
-    </body>
+<head>
+    <title>WebServer con Java</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container mt-5 text-center">
+    <h1>Benvenuto nel WebServer realizzato con Java e Apache Tomcat</h1>
+
+    <!--GET-->
+    <h2>Get: </h2>
+    <form action="./HelloServlet" method="get">
+         <input type="text" name="link" placeholder="Inserisci testo" required>
+         <input type="submit" value="Manda">
+    </form>
+    
+    <div class="row">
+        <div class="col-12 col-md-2 mb-3">
+            <button class="btn btn-lg w-100">CH6</button>
+        </div>
+        <div class="col-12 col-md-2 mb-3">
+            <button class="btn btn-lg w-100">CH5</button>
+        </div>
+        <div class="col-12 col-md-2 mb-3">
+            <button class="btn btn-lg w-100">CH4</button>
+        </div>
+        <div class="col-12 col-md-2 mb-3">
+            <button class="btn btn-lg w-100">CH3</button>
+        </div>
+        <div class="col-12 col-md-2 mb-3">
+            <button class="btn btn-lg w-100">CH2</button>
+        </div>
+        <div class="col-12 col-md-2 mb-3">
+            <button class="btn btn-lg w-100">CH1</button>
+        </div>
+    </div>
+</div>
+
+    
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
 </html>
+
