@@ -29,7 +29,6 @@ public class HelloServlet extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
@@ -66,9 +65,47 @@ public class HelloServlet extends HttpServlet {
     PrintWriter out = response.getWriter();
     String content = request.getParameter("link");
     
-    out.println("<html><body>");
-    out.println("<p> Il contenuto che hai scritto è: " + content + "</p>");
-    out.println("</body></html>");
+    out.println("<html><head>"
+            + "<title>WebServer con Java</title>\n" +
+"    <meta charset=\"UTF-8\">\n" +
+"    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n" +
+"    <link rel=\"icon\" type=\"image/x-icon\" href=\"https://upload.wikimedia.org/wikipedia/it/2/2e/Java_Logo.svg\">\n" +
+"    <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css\" rel=\"stylesheet\" integrity=\"sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB\" crossorigin=\"anonymous\">"
+            + "</head><body>");
+    out.println(" <div class=\"container mt-5 text-center\">\n" +
+"    <h1>Benvenuto nel WebServer realizzato con Java e Apache Tomcat</h1>\n" +
+"\n" +
+"    <!--GET-->\n" +
+"    <h2>Get: </h2>\n" +
+"    <form action=\"./HelloServlet\" method=\"get\">\n" +
+"         <input type=\"text\" name=\"link\" placeholder=\"Inserisci testo\" required>\n" +
+"         <input type=\"submit\" value=\"Manda\">\n" +
+"    </form>\n" +
+"\n" +
+"    <div class=\"row\">\n" +
+"        <div class=\"col-12 col-md-2 mb-3\">\n" +
+"            <button class=\"btn btn-lg w-100\">CH6</button>\n" +
+"        </div>\n" +
+"        <div class=\"col-12 col-md-2 mb-3\">\n" +
+"            <button class=\"btn btn-lg w-100\">CH5</button>\n" +
+"        </div>\n" +
+"        <div class=\"col-12 col-md-2 mb-3\">\n" +
+"            <button class=\"btn btn-lg w-100\">CH4</button>\n" +
+"        </div>\n" +
+"        <div class=\"col-12 col-md-2 mb-3\">\n" +
+"            <button class=\"btn btn-lg w-100\">CH3</button>\n" +
+"        </div>\n" +
+"        <div class=\"col-12 col-md-2 mb-3\">\n" +
+"            <button class=\"btn btn-lg w-100\">CH2</button>\n" +
+"        </div>\n" +
+"        <div class=\"col-12 col-md-2 mb-3\">\n" +
+"            <button class=\"btn btn-lg w-100\">CH1</button>\n" +
+"        </div>\n" +
+"    </div>\n" +
+"    <p> Il contenuto che hai scritto è: " + content + "</p>" +            
+"    </body></html>" +
+"    </div>");
+    
 }
     /**
      * Handles the HTTP <code>POST</code> method.

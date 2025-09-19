@@ -16,4 +16,12 @@ In this folder there is a Java Project that permits the user to ask data from a 
 
 ## HttpServer
 
-Created a c++ server
+Created a C++ HttpServer. I sent content in this from the HTTPC project, Java HttpClient.
+
+## QT 
+
+I represented the Java HttpClient in a better GUI but using C++. 
+
+## TestWebServer10
+
+I created a Web Server using Apache Tomcat 
