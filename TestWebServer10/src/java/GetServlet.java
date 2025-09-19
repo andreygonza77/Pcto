@@ -20,6 +20,9 @@ public class GetServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        response.setHeader("Access-Control-Allow-Origin", "*"); 
+        response.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
+        response.setHeader("Access-Control-Allow-Headers", "Content-Type");
         String urlString = request.getParameter("link");
         PrintWriter out = response.getWriter();
         out.println("<html><head>"
@@ -28,13 +31,14 @@ public class GetServlet extends HttpServlet {
 "    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n" +
 "    <link rel=\"icon\" type=\"image/x-icon\" href=\"https://upload.wikimedia.org/wikipedia/it/2/2e/Java_Logo.svg\">\n" +
 "    <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css\" rel=\"stylesheet\" integrity=\"sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB\" crossorigin=\"anonymous\">"
-            + "</head><body>");
+            + "</head><body class=\"body\">");
     out.println(" <div class=\"container mt-5 text-center\">\n" +
-"    <h1>Benvenuto nel WebServer realizzato con Java e Apache Tomcat</h1>\n" +
+"    <h1>Benvenuto nel WebServer</h1>\n" +
+"      <h3>Realizzato con Java e Apache Tomcat</h3>" +            
 "\n" +
 "    <!--GET-->\n" +
 "    <h2>Get: </h2>\n" +
-"    <form action=\"./HelloServlet\" method=\"get\">\n" +
+"    <form action=\"./GetServlet\" method=\"get\">\n" +
 "         <input type=\"text\" name=\"link\" placeholder=\"Inserisci testo\" required>\n" +
 "         <input type=\"submit\" value=\"Manda\">\n" +
 "    </form>\n" +

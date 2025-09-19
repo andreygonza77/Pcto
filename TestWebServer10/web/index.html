@@ -6,49 +6,39 @@
     <link rel="icon" type="image/x-icon" href="https://upload.wikimedia.org/wikipedia/it/2/2e/Java_Logo.svg">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
-<body>
+<body class="body">
     <div class="container mt-5 text-center">
-    <h1>Benvenuto nel WebServer realizzato con Java e Apache Tomcat</h1>
+    <h1>Benvenuto nel WebServer</h1>
+    <h3>Realizzato con Java e Apache Tomcat</h3>
 
     <!--GET-->
     <h2>Get: </h2>
     <form action="./GetServlet" method="get">
          <input type="text" name="link" placeholder="Inserisci link" required>
-         <input type="submit" value="Manda">
+         <input type="submit" value="Manda" class="mandaGet">
     </form>
     
     <h2>Post: </h2>
     <form action="./PostServlet" method="post">
         <input type="text" name="linkPost" placeholder="Inserisci link" required>
         <input type="text" name="contentPost" placeholder="Inserisci contenuto" required>
-        <input type="submit" value="Manda">
+        <input type="submit" value="Manda" class="mandaPost">
     </form>
-
-    <div class="row">
-        <div class="col-12 col-md-2 mb-3">
-            <button class="btn btn-lg w-100">CH6</button>
-        </div>
-        <div class="col-12 col-md-2 mb-3">
-            <button class="btn btn-lg w-100">CH5</button>
-        </div>
-        <div class="col-12 col-md-2 mb-3">
-            <button class="btn btn-lg w-100">CH4</button>
-        </div>
-        <div class="col-12 col-md-2 mb-3">
-            <button class="btn btn-lg w-100">CH3</button>
-        </div>
-        <div class="col-12 col-md-2 mb-3">
-            <button class="btn btn-lg w-100">CH2</button>
-        </div>
-        <div class="col-12 col-md-2 mb-3">
-            <button class="btn btn-lg w-100">CH1</button>
-        </div>
+        <form action="./PostServlet" method="post">
+    <div class="text-center mb-3 d-flex justify-content-between">
+        <button class="ch6 btn btn-lg">CH6</button>
+        <button class="ch5 btn btn-lg">CH5</button>
+        <button class="ch4 btn btn-lg">CH4</button>
+        <button class="ch3 btn btn-lg">CH3</button>
+        <button class="ch2 btn btn-lg">CH2</button>
+        <button class="ch1 btn btn-lg">CH1</button>
     </div>
+</form>
 </div>
 
     
 
-
+    <script src="./script/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>
