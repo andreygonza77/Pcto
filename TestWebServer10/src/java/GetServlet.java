@@ -49,24 +49,6 @@ public class GetServlet extends HttpServlet {
 "        <input type=\"submit\" value=\"Manda\">\n" +
 "    </form>" +            
 "    <div class=\"row\">\n" +
-"        <div class=\"col-12 col-md-2 mb-3\">\n" +
-"            <button class=\"btn btn-lg w-100\">CH6</button>\n" +
-"        </div>\n" +
-"        <div class=\"col-12 col-md-2 mb-3\">\n" +
-"            <button class=\"btn btn-lg w-100\">CH5</button>\n" +
-"        </div>\n" +
-"        <div class=\"col-12 col-md-2 mb-3\">\n" +
-"            <button class=\"btn btn-lg w-100\">CH4</button>\n" +
-"        </div>\n" +
-"        <div class=\"col-12 col-md-2 mb-3\">\n" +
-"            <button class=\"btn btn-lg w-100\">CH3</button>\n" +
-"        </div>\n" +
-"        <div class=\"col-12 col-md-2 mb-3\">\n" +
-"            <button class=\"btn btn-lg w-100\">CH2</button>\n" +
-"        </div>\n" +
-"        <div class=\"col-12 col-md-2 mb-3\">\n" +
-"            <button class=\"btn btn-lg w-100\">CH1</button>\n" +
-"        </div>\n" +
 "    </div>\n");
     
         if (!isValidUrl(urlString)) {
@@ -81,12 +63,8 @@ public class GetServlet extends HttpServlet {
                             .build();
         try{
             HttpResponse<String> responseHttp = clientHttp.send(requestHttp, HttpResponse.BodyHandlers.ofString());
-            System.out.println("Stato codice: " + responseHttp.statusCode());
-            System.out.println("Risposta: " + responseHttp.body());
-            System.out.println("Versione: " + responseHttp.version());
-            System.out.println("Header: " + responseHttp.headers());
        
-            out.println("Stato codice: " + responseHttp.statusCode() + "\n" + "\nRisposta: " + responseHttp.body() + "\n" + "\nVersione: " + responseHttp.version());
+            out.println("Stato: " + responseHttp.body());
         }
         catch(Exception e){
             e.printStackTrace();
