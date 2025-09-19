@@ -12,9 +12,16 @@
 
     <!--GET-->
     <h2>Get: </h2>
-    <form action="./HelloServlet" method="get">
-         <input type="text" name="link" placeholder="Inserisci testo" required>
+    <form action="./GetServlet" method="get">
+         <input type="text" name="link" placeholder="Inserisci link" required>
          <input type="submit" value="Manda">
+    </form>
+    
+    <h2>Post: </h2>
+    <form action="./PostServlet" method="post">
+        <input type="text" name="linkPost" placeholder="Inserisci link" required>
+        <input type="text" name="contentPost" placeholder="Inserisci contenuto" required>
+        <input type="submit" value="Manda">
     </form>
 
     <div class="row">

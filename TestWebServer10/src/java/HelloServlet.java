@@ -103,8 +103,7 @@ public class HelloServlet extends HttpServlet {
 "        </div>\n" +
 "    </div>\n" +
 "    <p> Il contenuto che hai scritto è: " + content + "</p>" +            
-"    </body></html>" +
-"    </div>");
+"    </body></html>");
     
 }
     /**
