@@ -1,27 +1,64 @@
-# Pcto
+# 🚀 Pcto - My Apprenticeship Projects
 
-This repository is the space for the projects i will do during my apprenticeship.
+Welcome to my **apprenticeship project repository**! Here you'll find all the experiments and projects I've been working on. 🌟
 
-## Test1
+---
 
-I made some examples in C++ and tried some new things.
+## 🧪 Test1
 
-## GuiEsempio
+I explored **C++** and tried some new things.  
+💡 Fun experiments and small examples to learn new tricks!
 
-I have been asked to make a GUI example in JavaSwing. 
+---
 
-## HTTPC
+## 🖥️ GuiEsempio
 
-In this folder there is a Java Project that permits the user to ask data from a website using a url. I imported Java Swing, even if it's not used anymore. In my host company i had to make the project able to turn on/off the relays using a LAN, and i made it, letting the user write a number [1-6], relè for the relay position, and another [0-1] to turn on/off. 
+A **Java Swing GUI example**.  
+👨‍💻 Task given to practice GUI development.  
 
-## HttpServer
+---
 
-Created a C++ HttpServer. I sent content in this from the HTTPC project, Java HttpClient.
+## 🌐 HTTPC
 
-## QT 
+A **Java project** that fetches data from websites using a URL.  
+- Extended functionality in my host company: control relays over LAN
+  - Input a number `[1-6]` for relay position  
+  - Input `[0-1]` to turn it on/off  
+  - Click on a CH Button to turn on/off the relay desidered
 
-I represented the Java HttpClient in a better GUI but using C++. 
+⚡ Powerful little tool for network device control!
 
-## TestWebServer10
+---
 
-I created a Web Server using Apache Tomcat 
+## 🖧 HttpServer
+
+Created a **C++ HTTP Server**.  
+- Receives content from the **HTTPC Java project** using Java HttpClient.  
+- Perfect practice for client-server communication.  
+
+---
+
+## 🖼️ QT
+
+Enhanced the **Java HttpClient** with a nicer GUI using **C++ and QT**.  
+✨ Cleaner and more user-friendly interface!
+
+---
+
+## 🌍 TestWebServer10
+
+Built a **Web Server** using:  
+- Apache Tomcat  
+- Java Web Application
+- NetBeans  
+
+📡 Simple web server project to understand server-client interactions.
+
+---
+
+### 📌 Notes
+
+All projects are part of my **apprenticeship journey**, experimenting with different languages and technologies.  
+Expect C++, Java, GUIs, networking, and web servers! 😎
+
+---
